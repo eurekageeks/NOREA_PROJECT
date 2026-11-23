@@ -3,9 +3,9 @@
 // =========================================================================
 const SITE_CONFIG = {
   // Put your institute email here (FormSubmit will send emails + student auto-reply)
-  INSTITUTE_EMAIL: 'eurekageekstech@gmail.com',
+  INSTITUTE_EMAIL: 'norea0083@gmail.com',
   // Put your institute WhatsApp number with country code, digits only (e.g. '919876543210')
-  WHATSAPP_NUMBER: '',
+  WHATSAPP_NUMBER: '919682818618',
 };
 
 const PROGRAMS = [
@@ -487,4 +487,251 @@ document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   }
 
   goToSlide(0);
+})();
+
+// =========================================================================
+//  About NŌRÉA – Live Animated Video of Lady Mentor & Girl Student (about.jpg)
+// =========================================================================
+(function initAboutLivingVideo() {
+  const img = document.getElementById('aboutSourceImg');
+  const canvas = document.getElementById('aboutLiveCanvas');
+  if (!img || !canvas) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  const COLS = 32;
+  const ROWS = 36;
+
+  // Soft rising steam particles above the coffee mug on the table
+  const steamWisps = Array.from({ length: 14 }, (_, i) => ({
+    phase: (i / 14) * Math.PI * 2,
+    speed: 0.45 + (i % 4) * 0.12,
+    drift: (i % 2 === 0 ? 1 : -1) * (0.004 + (i % 3) * 0.002),
+    size: 10 + (i % 5) * 4,
+  }));
+
+  // Smooth Gaussian radial falloff influence
+  function radial(nx, ny, cx, cy, rx, ry) {
+    const dx = (nx - cx) / rx;
+    const dy = (ny - cy) / ry;
+    const d2 = dx * dx + dy * dy;
+    if (d2 > 3.2) return 0;
+    return Math.exp(-d2 * 1.45);
+  }
+
+  // Compute organic displacement (dx, dy) in normalized coordinates for any point (nx, ny)
+  function getDisplacement(nx, ny, t) {
+    let dx = 0;
+    let dy = 0;
+
+    // Conversation turn cycle: lady explains politely, girl nods & responds warmly
+    const ladySpeakingEnv = 0.55 + 0.45 * Math.sin(t * 0.85);
+    const girlSpeakingEnv = 0.55 + 0.45 * Math.sin(t * 0.85 - 2.2);
+
+    // 1. Lady's Head (left, x=0.27, y=0.41): warm polite nodding & gentle tilt toward student
+    const ladyHeadW = radial(nx, ny, 0.275, 0.415, 0.135, 0.125);
+    if (ladyHeadW > 0) {
+      const nodY = Math.sin(t * 2.4) * 0.0042 * ladySpeakingEnv + Math.sin(t * 1.1) * 0.0025;
+      const tiltX = Math.sin(t * 1.45) * 0.0038;
+      dx += tiltX * ladyHeadW;
+      dy += nodY * ladyHeadW;
+    }
+
+    // 2. Lady's Mouth / Lower Jaw (x=0.352, y=0.466): subtle natural speaking syllables
+    const ladyJawW = radial(nx, ny, 0.352, 0.468, 0.032, 0.026);
+    if (ladyJawW > 0) {
+      const syllable =
+        (Math.sin(t * 9.5) * 0.5 + Math.sin(t * 14.2) * 0.35 + Math.cos(t * 6.3) * 0.25 + 0.4) *
+        ladySpeakingEnv;
+      dy += Math.max(0, syllable) * 0.0055 * ladyJawW;
+      dx += Math.max(0, syllable) * 0.0018 * ladyJawW;
+    }
+
+    // 3. Lady's Torso / Shoulders (x=0.23, y=0.60): natural breathing & posture shift
+    const ladyTorsoW = radial(nx, ny, 0.23, 0.6, 0.18, 0.16);
+    if (ladyTorsoW > 0) {
+      dy += Math.sin(t * 1.35) * 0.0028 * ladyTorsoW;
+      dx += Math.sin(t * 0.9) * 0.0022 * ladyTorsoW;
+    }
+
+    // 4. Lady's Hands & Forearm on Notebook (x=0.42, y=0.72): polite explaining gesture
+    const ladyHandW = radial(nx, ny, 0.425, 0.72, 0.11, 0.065);
+    if (ladyHandW > 0) {
+      const gesture = Math.sin(t * 2.8) * 0.5 + Math.sin(t * 1.7) * 0.5;
+      dx += gesture * 0.0052 * ladySpeakingEnv * ladyHandW;
+      dy += Math.cos(t * 2.6) * 0.0045 * ladySpeakingEnv * ladyHandW;
+    }
+
+    // 5. Girl's Head (right, x=0.775, y=0.43): attentive nodding & warm smile
+    const girlHeadW = radial(nx, ny, 0.775, 0.43, 0.125, 0.115);
+    if (girlHeadW > 0) {
+      const listenNod = Math.sin(t * 2.7 - 0.9) * 0.0046;
+      const leanX = -Math.sin(t * 1.2) * 0.0034;
+      dx += leanX * girlHeadW;
+      dy += listenNod * girlHeadW;
+    }
+
+    // 6. Girl's Mouth / Jaw (x=0.720, y=0.476): gentle speaking / smiling response
+    const girlJawW = radial(nx, ny, 0.72, 0.476, 0.03, 0.024);
+    if (girlJawW > 0) {
+      const replySyllable =
+        (Math.sin(t * 8.8 - 1.1) * 0.5 + Math.cos(t * 12.6) * 0.35 + 0.35) * girlSpeakingEnv;
+      dy += Math.max(0, replySyllable) * 0.0048 * girlJawW;
+      dx -= Math.max(0, replySyllable) * 0.0014 * girlJawW;
+    }
+
+    // 7. Girl's Shoulders & Right Hand on Table (x=0.615, y=0.68)
+    const girlTorsoW = radial(nx, ny, 0.78, 0.61, 0.17, 0.15);
+    if (girlTorsoW > 0) {
+      dy += Math.sin(t * 1.45 - 0.6) * 0.0026 * girlTorsoW;
+    }
+    const girlHandW = radial(nx, ny, 0.615, 0.68, 0.065, 0.055);
+    if (girlHandW > 0) {
+      dy += Math.sin(t * 2.5 - 1.2) * 0.004 * girlHandW;
+      dx -= Math.cos(t * 2.1) * 0.0032 * girlHandW;
+    }
+
+    // 8. Olive Plant Leaves in Background (x=0.44, y=0.33): subtle breeze sway
+    const plantW = radial(nx, ny, 0.44, 0.33, 0.13, 0.11);
+    if (plantW > 0) {
+      dx += Math.sin(t * 1.6 + ny * 8) * 0.0024 * plantW;
+    }
+
+    return { dx, dy };
+  }
+
+  let gridX = new Float32Array((COLS + 1) * (ROWS + 1));
+  let gridY = new Float32Array((COLS + 1) * (ROWS + 1));
+
+  function renderFrame(now) {
+    const t = now * 0.001;
+    const cw = canvas.clientWidth || 520;
+    const ch = canvas.clientHeight || 585;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const targetW = Math.round(cw * dpr);
+    const targetH = Math.round(ch * dpr);
+
+    if (canvas.width !== targetW || canvas.height !== targetH) {
+      canvas.width = targetW;
+      canvas.height = targetH;
+    }
+
+    const iw = img.naturalWidth || 900;
+    const ih = img.naturalHeight || 1200;
+
+    // Cover crop calculation (matching object-fit: cover + subtle cinematic camera pan/zoom)
+    const camZoom = 1.035 + Math.sin(t * 0.45) * 0.015;
+    const camPanX = Math.sin(t * 0.35) * 0.01;
+    const camPanY = Math.cos(t * 0.3) * 0.006;
+
+    const canvasAspect = targetW / targetH;
+    const imgAspect = iw / ih;
+    let cropW = iw;
+    let cropH = ih;
+    if (imgAspect > canvasAspect) {
+      cropW = ih * canvasAspect;
+    } else {
+      cropH = iw / canvasAspect;
+    }
+    cropW /= camZoom;
+    cropH /= camZoom;
+    const cropX = (iw - cropW) * 0.5 + camPanX * iw;
+    const cropY = (ih - cropH) * 0.5 + camPanY * ih;
+
+    // Compute deformed vertex grid
+    for (let r = 0; r <= ROWS; r++) {
+      const ny = r / ROWS;
+      for (let c = 0; c <= COLS; c++) {
+        const nx = c / COLS;
+        const idx = r * (COLS + 1) + c;
+        // Pin outer border vertices so edges never pull inward
+        const edgeFade =
+          Math.min(nx * 8, (1 - nx) * 8, 1) * Math.min(ny * 8, (1 - ny) * 8, 1);
+        const disp = edgeFade > 0 ? getDisplacement(nx, ny, t) : { dx: 0, dy: 0 };
+        gridX[idx] = (nx + disp.dx * edgeFade) * targetW;
+        gridY[idx] = (ny + disp.dy * edgeFade) * targetH;
+      }
+    }
+
+    ctx.clearRect(0, 0, targetW, targetH);
+
+    // Draw seamless warped grid cells using hardware-accelerated ctx.drawImage
+    const cellSrcW = cropW / COLS;
+    const cellSrcH = cropH / ROWS;
+    const overlap = 1.15 * dpr;
+
+    for (let r = 0; r < ROWS; r++) {
+      const sy = cropY + r * cellSrcH;
+      for (let c = 0; c < COLS; c++) {
+        const sx = cropX + c * cellSrcW;
+        const i00 = r * (COLS + 1) + c;
+        const i10 = i00 + 1;
+        const i01 = (r + 1) * (COLS + 1) + c;
+        const i11 = i01 + 1;
+
+        const minX = Math.min(gridX[i00], gridX[i01]);
+        const maxX = Math.max(gridX[i10], gridX[i11]);
+        const minY = Math.min(gridY[i00], gridY[i10]);
+        const maxY = Math.max(gridY[i01], gridY[i11]);
+
+        ctx.drawImage(
+          img,
+          sx,
+          sy,
+          cellSrcW,
+          cellSrcH,
+          minX - overlap * 0.5,
+          minY - overlap * 0.5,
+          maxX - minX + overlap,
+          maxY - minY + overlap
+        );
+      }
+    }
+
+    // Soft warm sunlight shimmer from the right window
+    const sunAlpha = 0.08 + 0.04 * Math.sin(t * 0.9);
+    const sunGrad = ctx.createRadialGradient(
+      targetW * 0.92,
+      targetH * 0.22,
+      targetW * 0.04,
+      targetW * 0.72,
+      targetH * 0.42,
+      targetW * 0.75
+    );
+    sunGrad.addColorStop(0, `rgba(255, 244, 214, ${sunAlpha * 1.6})`);
+    sunGrad.addColorStop(0.5, `rgba(255, 237, 196, ${sunAlpha * 0.7})`);
+    sunGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    ctx.fillStyle = sunGrad;
+    ctx.fillRect(0, 0, targetW, targetH);
+
+    // Subtle rising steam from the hot cup on the wooden table (x ≈ 0.672, y ≈ 0.75)
+    ctx.save();
+    steamWisps.forEach((w) => {
+      const cycle = ((t * w.speed + w.phase) % (Math.PI * 2)) / (Math.PI * 2);
+      const alpha = Math.sin(cycle * Math.PI) * 0.16;
+      const wx = targetW * (0.672 + Math.sin(cycle * Math.PI * 2 + w.phase) * 0.014 + w.drift * cycle * 6);
+      const wy = targetH * (0.755 - cycle * 0.11);
+      const rad = w.size * dpr * (0.7 + cycle * 1.1);
+      const g = ctx.createRadialGradient(wx, wy, 0, wx, wy, rad);
+      g.addColorStop(0, `rgba(255, 255, 255, ${alpha})`);
+      g.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(wx, wy, rad, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    ctx.restore();
+
+    requestAnimationFrame(renderFrame);
+  }
+
+  function start() {
+    requestAnimationFrame(renderFrame);
+  }
+
+  if (img.complete && img.naturalWidth > 0) {
+    start();
+  } else {
+    img.addEventListener('load', start, { once: true });
+  }
 })();
