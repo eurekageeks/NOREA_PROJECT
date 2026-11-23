@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="theme-color" content="#4F46E5" />
+    <title>NŌRÉA – Learning &amp; Development | Learn • Express • Grow</title>
+    <meta
+      name="description"
+      content="NŌRÉA – Learning & Development. Spoken English & Communication, Personality Development, and Parenting & Child Development. Building Confidence. Nurturing Potential."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#home" class="logo" aria-label="NŌRÉA Home">
+          <span class="logo-mark" aria-hidden="true">✦</span>
+          <span class="logo-text">
+            <span class="logo-name">NŌRÉA</span>
+            <span class="logo-sub">LEARNING &amp; DEVELOPMENT</span>
+          </span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About Us</a>
+          <a href="#programs" class="nav-link">Our Programs</a>
+          <a href="#why-norea" class="nav-link">Why NŌRÉA</a>
+          <a href="#contact" class="nav-link">Contact Us</a>
+        </nav>
+
+        <div class="header-cta">
+          <a href="#enquiry" class="btn btn-primary btn-sm">Enquire Now &rarr;</a>
+        </div>
+
+        <button type="button" id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span id="menuIcon">&#9776;</span>
+        </button>
+      </div>
+
+      <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile Navigation">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About Us</a>
+        <a href="#programs" class="mobile-link">Our Programs</a>
+        <a href="#why-norea" class="mobile-link">Why NŌRÉA</a>
+        <a href="#contact" class="mobile-link">Contact Us</a>
+        <a href="#enquiry" class="btn btn-primary btn-full">Enquire Now &rarr;</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section id="home" class="hero-mesh hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="pill-eyebrow">✦ Learn • Express • Grow</span>
+            <h1 class="display-title">
+              Building <span class="text-gradient">Confidence.</span> Nurturing Potential.
+            </h1>
+            <p class="lead">
+              A colourful, welcoming space for students and families to master Spoken English, shine in Personality
+              Development, and build joyful Parenting habits.
+            </p>
+            <div class="btn-row">
+              <a href="#programs" class="btn btn-primary btn-lg">Explore Programs &rarr;</a>
+              <a href="#enquiry" class="btn btn-amber btn-lg">Quick Enquiry</a>
+            </div>
+            <div class="chip-row">
+              <span class="chip"><span class="check-dot">&#10003;</span> Practical learning</span>
+              <span class="chip"><span class="check-dot">&#10003;</span> Interactive sessions</span>
+              <span class="chip"><span class="check-dot">&#10003;</span> Personal attention</span>
+              <span class="chip"><span class="check-dot">&#10003;</span> Confidence building</span>
+              <span class="chip"><span class="check-dot">&#10003;</span> Friendly mentors</span>
+            </div>
+          </div>
+
+          <div class="hero-media reveal">
+            <div class="hero-glow"></div>
+            <div class="hero-frame">
+              <img src="images/hero.jpg" alt="Students learning with confidence at NŌRÉA" />
+            </div>
+            <div class="floating-badges">
+              <div class="float-badge">
+                <span class="float-icon float-wa">&#128172;</span>
+                <span>WhatsApp Enquiry Alerts</span>
+              </div>
+              <div class="float-badge">
+                <span class="float-icon float-mail">&#9993;</span>
+                <span>Instant Email Updates</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR PROGRAMS -->
+      <section id="programs" class="section">
+        <div class="container">
+          <div class="section-head center reveal">
+            <span class="pill-eyebrow">Our Programs</span>
+            <h2 class="section-title">Colourful learning journeys for every student.</h2>
+            <p class="section-sub">
+              Pick a program that matches your goals — Spoken English, Personality Development, or Parenting &amp; Child
+              Development.
+            </p>
+          </div>
+
+          <div id="programsGrid" class="programs-grid"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT US -->
+      <section id="about" class="section section-tinted">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-photo reveal">
+              <img src="images/about.jpg" alt="Friendly mentoring at NŌRÉA" loading="lazy" />
+            </div>
+            <div class="about-copy reveal">
+              <span class="pill-eyebrow">About NŌRÉA</span>
+              <h2 class="section-title">A joyful space for real personal transformation.</h2>
+              <p class="body-text">
+                NŌRÉA is dedicated to helping students and individuals develop communication skills, confidence,
+                personality, and positive relationships.
+              </p>
+              <p class="muted-text">
+                We bring together engaging Spoken English training, uplifting Personality Development, and thoughtful
+                Parenting education in a warm, encouraging student-first environment.
+              </p>
+
+              <div class="mv-grid">
+                <div class="card mv-card">
+                  <span class="mv-icon grad-indigo">&#129517;</span>
+                  <h3>Our Mission</h3>
+                  <p>
+                    To empower every student with the communication skills, self-belief, and emotional awareness they
+                    need to express themselves boldly and grow with joy.
+                  </p>
+                </div>
+                <div class="card mv-card">
+                  <span class="mv-icon grad-rose">&#127775;</span>
+                  <h3>Our Vision</h3>
+                  <p>
+                    To be a vibrant, trusted learning community where young minds and families discover their brightest
+                    potential.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE NŌRÉA -->
+      <section id="why-norea" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="pill-eyebrow">Why Students Love NŌRÉA</span>
+            <h2 class="section-title">Confidence that shines inside and outside the classroom.</h2>
+          </div>
+
+          <div class="why-grid">
+            <article class="why-card tint-indigo reveal">
+              <div class="why-icon grad-indigo">&#128214;</div>
+              <h3>Practical Learning</h3>
+              <p>
+                Every session is built around real-world conversations, presentations and fun everyday scenarios — never
+                boring memorisation.
+              </p>
+            </article>
+            <article class="why-card tint-rose reveal">
+              <div class="why-icon grad-rose">&#128101;</div>
+              <h3>Interactive Sessions</h3>
+              <p>
+                Lively group discussions, guided role-plays and collaborative games keep students actively participating
+                from day one.
+              </p>
+            </article>
+            <article class="why-card tint-amber reveal">
+              <div class="why-icon grad-amber">&#129309;</div>
+              <h3>Personal Attention</h3>
+              <p>
+                Friendly, small-group batches ensure every learner gets individual feedback, encouragement and space to
+                shine.
+              </p>
+            </article>
+            <article class="why-card tint-teal reveal">
+              <div class="why-icon grad-teal">&#10024;</div>
+              <h3>Confidence-Building Activities</h3>
+              <p>
+                Step-by-step speaking practice, stage presence exercises and creative milestones help students overcome
+                shyness naturally.
+              </p>
+            </article>
+            <article class="why-card tint-violet reveal">
+              <div class="why-icon grad-violet">&#127942;</div>
+              <h3>Experienced Trainers</h3>
+              <p>
+                Warm, supportive mentors bring patience, structure and enthusiasm to every class — nurturing both skill
+                and self-belief.
+              </p>
+            </article>
+            <article class="why-photo-card reveal">
+              <img src="images/why-norea.jpg" alt="Interactive student circle at NŌRÉA" loading="lazy" />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIMPLE ENQUIRY FORM -->
+      <section id="enquiry" class="section section-tinted">
+        <div class="container enquiry-grid">
+          <div class="enquiry-side reveal">
+            <span class="pill-eyebrow">Instant Notification</span>
+            <h2 class="section-title">Enquire in 30 seconds — get WhatsApp &amp; Email updates!</h2>
+            <p class="body-text">
+              No account creation or complicated forms. Simply submit your enquiry and receive immediate WhatsApp and
+              Email confirmation with your reference number.
+            </p>
+            <div class="enquiry-info-box">
+              <div class="info-item">
+                <span class="info-icon float-wa">&#128172;</span>
+                <div>
+                  <strong>WhatsApp Notification</strong>
+                  <p>Opens WhatsApp immediately with your formatted enquiry summary and reference number.</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon float-mail">&#9993;</span>
+                <div>
+                  <strong>Email Notification</strong>
+                  <p>Triggers email confirmation with your selected program, learning mode, and reference ID.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="enquiry-form-wrap reveal">
+            <div class="card form-card">
+              <div class="card-rainbow-bar"></div>
+
+              <!-- Form View -->
+              <form id="enquiryForm" novalidate>
+                <h3 class="form-title">Quick Student Enquiry</h3>
+                <p class="form-sub">
+                  Fill in your details below — instant WhatsApp &amp; Email notifications will be triggered on submit.
+                </p>
+
+                <div class="field-row">
+                  <div class="field-group">
+                    <label for="fullName">Full Name <span class="req">*</span></label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Enter student name" required />
+                    <small class="error-msg" data-error="fullName"></small>
+                  </div>
+                  <div class="field-group">
+                    <label for="email">Email Address <span class="req">*</span></label>
+                    <input id="email" name="email" type="email" placeholder="student@example.com" required />
+                    <small class="error-msg" data-error="email"></small>
+                  </div>
+                </div>
+
+                <div class="field-row">
+                  <div class="field-group">
+                    <label for="phone">WhatsApp / Mobile Number <span class="req">*</span></label>
+                    <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required />
+                    <small class="error-msg" data-error="phone"></small>
+                  </div>
+                  <div class="field-group">
+                    <label for="program">Select Program <span class="req">*</span></label>
+                    <select id="program" name="program" required>
+                      <option value="">Choose a program…</option>
+                      <option value="Spoken English & Communication">Spoken English &amp; Communication</option>
+                      <option value="Personality Development">Personality Development</option>
+                      <option value="Parenting & Child Development">Parenting &amp; Child Development</option>
+                    </select>
+                    <small class="error-msg" data-error="program"></small>
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label for="learningMode">Preferred Learning Mode <span class="req">*</span></label>
+                  <select id="learningMode" name="learningMode" required>
+                    <option value="">Select learning mode…</option>
+                    <option value="Online (live virtual sessions)">Online (live virtual sessions)</option>
+                    <option value="In-person (at the institute)">In-person (at the institute)</option>
+                    <option value="Hybrid (online + in-person)">Hybrid (online + in-person)</option>
+                  </select>
+                  <small class="error-msg" data-error="learningMode"></small>
+                </div>
+
+                <div class="field-group">
+                  <label for="message">Message (Optional)</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="3"
+                    placeholder="Share your goals, preferred batch timings, or questions…"
+                  ></textarea>
+                </div>
+
+                <div class="btn-row">
+                  <button type="submit" id="submitBtn" class="btn btn-primary btn-lg">Submit &amp; Notify &rarr;</button>
+                  <button type="button" id="clearBtn" class="btn btn-outline btn-lg">Clear</button>
+                </div>
+
+                <div class="form-footer-notes">
+                  <span class="note-wa">&#128172; Instant WhatsApp Notification</span>
+                  <span class="note-mail">&#9993; Instant Email Notification</span>
+                </div>
+              </form>
+
+              <!-- Confirmation View -->
+              <div id="successBox" class="success-box hidden">
+                <div class="success-icon">&#10003;</div>
+                <h3 id="successHeading" class="form-title">Thank you!</h3>
+                <p id="successDesc" class="form-sub"></p>
+                <div id="refBadge" class="ref-badge"></div>
+                <div class="success-actions single">
+                  <a id="waAction" href="#" target="_blank" rel="noreferrer" class="btn btn-whatsapp btn-lg">
+                    &#128172; Open WhatsApp Confirmation
+                  </a>
+                </div>
+                <p id="emailStatusNote" class="status-note"></p>
+                <button type="button" id="resetSuccessBtn" class="btn btn-ghost">Submit Another Enquiry</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMAIL SENT POPUP -->
+      <div id="sentPopup" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="sentPopupTitle">
+        <div class="modal-backdrop" id="sentPopupBackdrop"></div>
+        <div class="modal-panel sent-popup-panel">
+          <button type="button" id="sentPopupClose" class="modal-close" aria-label="Close">&times;</button>
+          <div class="success-icon">&#10003;</div>
+          <h2 id="sentPopupTitle" style="font-size:2rem;">Email Sent!</h2>
+          <p id="sentPopupMsg" class="form-sub" style="margin-top:8px;"></p>
+          <div id="sentPopupRef" class="ref-badge"></div>
+          <div class="btn-row center" style="margin-top:16px;">
+            <button type="button" id="sentPopupOk" class="btn btn-primary btn-lg">Done</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT & CTA BANNER -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="cta-banner reveal">
+            <div class="cta-glow-1"></div>
+            <div class="cta-glow-2"></div>
+            <div class="cta-content">
+              <span class="cta-pill">✦ Learn • Express • Grow</span>
+              <h2>Ready to discover a brighter, more confident you?</h2>
+              <p>
+                Submit a quick enquiry and get instant WhatsApp &amp; Email confirmation with our upcoming batch
+                details.
+              </p>
+              <div class="btn-row center">
+                <a href="#enquiry" class="btn btn-amber btn-lg">Enquire Now &rarr;</a>
+                <a href="#programs" class="btn btn-outline-light btn-lg">Explore Programs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-rainbow"></div>
+      <div class="container footer-grid">
+        <div>
+          <a href="#home" class="logo">
+            <span class="logo-mark" aria-hidden="true">✦</span>
+            <span class="logo-text">
+              <span class="logo-name light">NŌRÉA</span>
+              <span class="logo-sub amber">LEARNING &amp; DEVELOPMENT</span>
+            </span>
+          </a>
+          <p class="footer-about">
+            A colourful, welcoming learning institute focused on Spoken English, Personality Development, Confidence
+            Building, and Positive Parenting.
+          </p>
+          <p class="footer-tag">LEARN • EXPRESS • GROW</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Our Programs</a></li>
+            <li><a href="#why-norea">Why NŌRÉA</a></li>
+            <li><a href="#enquiry">Admissions Enquiry</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Get In Touch</h4>
+          <p class="footer-about">
+            Have a question? <a href="#enquiry" class="footer-accent-link">Submit a quick enquiry</a> for instant
+            WhatsApp &amp; Email updates.
+          </p>
+          <div class="footer-lounge">
+            <img src="images/contact.jpg" alt="NŌRÉA learning lounge" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; <span id="year"></span> NŌRÉA – Learning &amp; Development. All rights reserved.</p>
+        <p class="footer-tag-sm">LEARN • EXPRESS • GROW</p>
+      </div>
+    </footer>
+
+    <!-- PROGRAM DETAILS MODAL -->
+    <div id="programModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-panel">
+        <button type="button" id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
