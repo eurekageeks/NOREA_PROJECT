@@ -88,9 +88,94 @@
 
           <div class="hero-media reveal">
             <div class="hero-glow"></div>
-            <div class="hero-frame">
-              <img src="images/hero.jpg" alt="Students learning with confidence at NŌRÉA" />
+
+            <!-- COLOURFUL 2-VIDEO SLIDER: PERSONALITY DEVELOPMENT CLASSES -->
+            <div class="video-slider" id="heroVideoSlider" aria-roledescription="carousel" aria-label="Personality Development Classroom Videos">
+              <div class="video-slider-rainbow"></div>
+
+              <div class="video-slides">
+                <!-- Slide 1 -->
+                <div class="video-slide active" data-slide="0">
+                  <div class="video-top-badges">
+                    <span class="video-pill grad-rose">
+                      <span class="live-dot"></span> Clip 1 / 2 • Personality Development
+                    </span>
+                    <span class="video-tag-pill">Confidence &amp; Body Language</span>
+                  </div>
+                  <video
+                    class="hero-video"
+                    src="https://assets.mixkit.co/videos/49155/49155-720.mp4"
+                    poster="images/hero.jpg"
+                    autoplay
+                    muted
+                    playsinline
+                    preload="metadata"
+                  ></video>
+                  <div class="video-caption-overlay">
+                    <div class="video-caption-text">
+                      <span class="video-caption-eyebrow">✦ Classroom Training Session</span>
+                      <h3>Teacher Coaching Students in Stage Presence &amp; Expression</h3>
+                      <p>Interactive personality development session building eye contact, posture &amp; vocal confidence.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="video-slide" data-slide="1">
+                  <div class="video-top-badges">
+                    <span class="video-pill grad-indigo">
+                      <span class="live-dot"></span> Clip 2 / 2 • Personality Development
+                    </span>
+                    <span class="video-tag-pill">Leadership &amp; Communication</span>
+                  </div>
+                  <video
+                    class="hero-video"
+                    src="https://assets.mixkit.co/videos/35954/35954-720.mp4"
+                    poster="images/program-personality-development.jpg"
+                    muted
+                    playsinline
+                    preload="metadata"
+                  ></video>
+                  <div class="video-caption-overlay">
+                    <div class="video-caption-text">
+                      <span class="video-caption-eyebrow">✦ Practical Group Workshop</span>
+                      <h3>Mentor Guiding Students in Interactive Personality Workshop</h3>
+                      <p>Hands-on mentoring where trainers guide students through real-world presentation &amp; teamwork skills.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slider Prev / Next Arrows & Play/Pause -->
+              <button type="button" class="slider-arrow slider-prev" id="videoPrevBtn" aria-label="Previous video clip">
+                &#10094;
+              </button>
+              <button type="button" class="slider-arrow slider-next" id="videoNextBtn" aria-label="Next video clip">
+                &#10095;
+              </button>
+              <button type="button" class="slider-play-btn" id="videoPlayToggle" aria-label="Pause or play video" title="Play / Pause">
+                &#10074;&#10074;
+              </button>
+
+              <!-- Colourful Clip Switcher Tabs -->
+              <div class="video-slider-controls" role="tablist" aria-label="Select classroom video clip">
+                <button type="button" class="video-tab active" data-target="0" role="tab" aria-selected="true">
+                  <span class="video-tab-icon grad-rose">&#9654;</span>
+                  <span class="video-tab-info">
+                    <strong>Clip 1: Confidence Training</strong>
+                    <small>Teacher coaching body language</small>
+                  </span>
+                </button>
+                <button type="button" class="video-tab" data-target="1" role="tab" aria-selected="false">
+                  <span class="video-tab-icon grad-indigo">&#9654;</span>
+                  <span class="video-tab-info">
+                    <strong>Clip 2: Personality Workshop</strong>
+                    <small>Interactive student mentoring</small>
+                  </span>
+                </button>
+              </div>
             </div>
+
             <div class="floating-badges">
               <div class="float-badge">
                 <span class="float-icon float-wa">&#128172;</span>

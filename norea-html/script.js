@@ -376,3 +376,104 @@ const observer = new IntersectionObserver(
   { threshold: 0.12 }
 );
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+// =========================================================================
+//  Colourful 2-Video Hero Slider (Personality Development Classroom Clips)
+// =========================================================================
+(function initHeroVideoSlider() {
+  const slider = document.getElementById('heroVideoSlider');
+  if (!slider) return;
+
+  const slides = Array.from(slider.querySelectorAll('.video-slide'));
+  const tabs = Array.from(slider.querySelectorAll('.video-tab'));
+  const videos = slides.map((s) => s.querySelector('video'));
+  const prevBtn = document.getElementById('videoPrevBtn');
+  const nextBtn = document.getElementById('videoNextBtn');
+  const playToggle = document.getElementById('videoPlayToggle');
+
+  let currentIndex = 0;
+  let isPaused = false;
+  let fallbackTimer = null;
+
+  function updatePlayToggleIcon(paused) {
+    if (!playToggle) return;
+    playToggle.innerHTML = paused ? '&#9654;' : '&#10074;&#10074;';
+  }
+
+  function scheduleNextFallback() {
+    clearTimeout(fallbackTimer);
+    if (isPaused) return;
+    fallbackTimer = setTimeout(() => {
+      goToSlide((currentIndex + 1) % slides.length);
+    }, 12000);
+  }
+
+  function goToSlide(index) {
+    currentIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      const active = i === currentIndex;
+      slide.classList.toggle('active', active);
+    });
+    tabs.forEach((tab, i) => {
+      const active = i === currentIndex;
+      tab.classList.toggle('active', active);
+      tab.setAttribute('aria-selected', String(active));
+    });
+
+    videos.forEach((vid, i) => {
+      if (!vid) return;
+      if (i === currentIndex) {
+        vid.currentTime = 0;
+        if (!isPaused) {
+          vid.play().catch(() => {});
+        }
+      } else {
+        vid.pause();
+      }
+    });
+
+    scheduleNextFallback();
+  }
+
+  // Auto-advance when a video clip finishes playing
+  videos.forEach((vid, idx) => {
+    if (!vid) return;
+    vid.addEventListener('ended', () => {
+      if (idx === currentIndex && !isPaused) {
+        goToSlide((currentIndex + 1) % slides.length);
+      }
+    });
+  });
+
+  if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = Number(tab.dataset.target || 0);
+      isPaused = false;
+      updatePlayToggleIcon(false);
+      goToSlide(target);
+    });
+  });
+
+  if (playToggle) {
+    playToggle.addEventListener('click', () => {
+      const activeVid = videos[currentIndex];
+      if (!activeVid) return;
+      if (activeVid.paused) {
+        isPaused = false;
+        activeVid.play().catch(() => {});
+        updatePlayToggleIcon(false);
+        scheduleNextFallback();
+      } else {
+        isPaused = true;
+        activeVid.pause();
+        updatePlayToggleIcon(true);
+        clearTimeout(fallbackTimer);
+      }
+    });
+  }
+
+  goToSlide(0);
+})();
