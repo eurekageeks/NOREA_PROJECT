@@ -313,35 +313,40 @@ form.addEventListener('submit', async (e) => {
 
   if (SITE_CONFIG.INSTITUTE_EMAIL) {
     try {
-      const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(SITE_CONFIG.INSTITUTE_EMAIL)}`, {
+      const endpoint = `https://formsubmit.co/ajax/${SITE_CONFIG.INSTITUTE_EMAIL.trim()}`;
+      const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           _subject: subject,
+          _cc: data.email,
+          _replyto: data.email,
           _autoresponse: plainText,
           _captcha: 'false',
           _template: 'table',
-          name: data.fullName,
-          email: data.email,
-          phone: data.phone,
-          program: data.program,
-          learning_mode: data.learningMode,
-          message: data.message || '—',
-          reference: ref,
+          Reference_ID: ref,
+          Student_Name: data.fullName,
+          Email: data.email,
+          Phone: data.phone,
+          Program: data.program,
+          Preferred_Mode: data.learningMode,
+          Message: data.message || '—',
         }),
       });
       const json = await res.json().catch(() => ({}));
       if (res.ok && (json.success === true || json.success === 'true')) {
         statusText = `✓ Email sent automatically to ${SITE_CONFIG.INSTITUTE_EMAIL} & ${data.email}`;
-      } else if (json.message) {
-        popupTitle = 'One-Time Email Activation Needed';
-        popupMsg = `${json.message} Check ${SITE_CONFIG.INSTITUTE_EMAIL} (Inbox & Spam) and click Activate Form once — after that all emails send automatically!`;
+      } else {
+        popupTitle = 'Email Activation / Domain Check';
+        popupMsg = json.message
+          ? `${json.message} Check ${SITE_CONFIG.INSTITUTE_EMAIL} (Inbox & Spam) and click Activate Form for this exact website URL.`
+          : `FormSubmit returned status ${res.status}. Please check ${SITE_CONFIG.INSTITUTE_EMAIL} (including Spam) for the FormSubmit activation email for this domain.`;
         statusText = `⚠ ${popupMsg}`;
         isWarn = true;
       }
     } catch {
       popupTitle = 'Open on Live Website (HTTPS)';
-      popupMsg = 'Automatic background emails work on your live https:// Vercel link (browsers block background form APIs on local file:// pages).';
+      popupMsg = 'Automatic background emails work on your live https:// link (browsers block background form APIs on local file:// pages).';
       statusText = `⚠ ${popupMsg}`;
       isWarn = true;
     }
