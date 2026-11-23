@@ -16,6 +16,7 @@ const PROGRAMS = [
     gradClass: 'grad-indigo',
     tagClass: 'tag-indigo',
     image: 'images/program-spoken-english.jpg',
+    video: 'https://assets.mixkit.co/videos/4809/4809-720.mp4',
     modes: ['Online', 'In-person', 'Hybrid'],
     shortDesc: 'Develop effective communication skills and speak English with confidence.',
     description:
@@ -79,6 +80,7 @@ const PROGRAMS = [
     gradClass: 'grad-teal',
     tagClass: 'tag-teal',
     image: 'images/program-parenting.jpg',
+    video: 'https://assets.mixkit.co/videos/4790/4790-720.mp4',
     modes: ['Online', 'In-person', 'Hybrid'],
     shortDesc: 'Understand children better and develop positive, joyful parenting approaches.',
     description:
