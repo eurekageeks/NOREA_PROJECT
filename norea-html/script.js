@@ -47,6 +47,7 @@ const PROGRAMS = [
     gradClass: 'grad-rose',
     tagClass: 'tag-rose',
     image: 'images/program-personality-development.jpg',
+    video: 'https://assets.mixkit.co/videos/6636/6636-720.mp4',
     modes: ['Online', 'In-person', 'Hybrid'],
     shortDesc: 'Build confidence, improve personality, and develop interpersonal & leadership skills.',
     description:
@@ -137,9 +138,15 @@ mobileMenu.querySelectorAll('a').forEach((a) =>
 const programsGrid = document.getElementById('programsGrid');
 programsGrid.innerHTML = PROGRAMS.map(
   (p) => `
-  <article class="card program-card reveal">
+  <article class="card program-card ${p.video ? 'program-card-featured' : ''} reveal">
+    ${p.video ? '<div class="prog-rainbow-bar"></div>' : ''}
     <div class="prog-media">
-      <img src="${p.image}" alt="${p.title}" loading="lazy" />
+      ${
+        p.video
+          ? `<video class="prog-video" src="${p.video}" poster="${p.image}" autoplay loop muted playsinline preload="metadata"></video>
+             <span class="prog-live-pill"><span class="live-dot"></span> Live Session</span>`
+          : `<img src="${p.image}" alt="${p.title}" loading="lazy" />`
+      }
       <div class="prog-overlay"></div>
       <span class="prog-badge ${p.gradClass}">${p.badge}</span>
       <div class="prog-modes">${p.modes.map((m) => `<span class="prog-mode">${m}</span>`).join('')}</div>
@@ -192,7 +199,11 @@ programsGrid.addEventListener('click', (e) => {
     <span class="prog-badge ${p.gradClass}" style="position:static;display:inline-block;">${p.badge}</span>
     <h2 id="modalTitle" style="margin-top:12px;font-size:2.1rem;">${p.title}</h2>
     <p style="margin:10px 0 18px;color:#475569;font-size:0.95rem;">${p.description}</p>
-    <img src="${p.image}" alt="${p.title}" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;margin-bottom:20px;" />
+    ${
+      p.video
+        ? `<video src="${p.video}" poster="${p.image}" autoplay loop muted playsinline controls style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;margin-bottom:20px;"></video>`
+        : `<img src="${p.image}" alt="${p.title}" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;margin-bottom:20px;" />`
+    }
     <h3 style="font-size:1.4rem;margin-bottom:10px;">Key Topics Covered</h3>
     <div class="topic-tags" style="margin-top:0;margin-bottom:18px;">
       ${p.topics.map((t, i) => `<span class="topic-tag ${p.tagClass}">${i + 1}. ${t}</span>`).join('')}
