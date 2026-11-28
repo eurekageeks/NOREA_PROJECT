@@ -828,5 +828,15 @@ document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
       const isOpen = mobileBody.classList.toggle('open');
       mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
+
+    // Nested collapsible vertical groups inside Business Verticals
+    mobileBody.querySelectorAll('.mobile-sub-accordion-btn').forEach(function (subBtn) {
+      subBtn.addEventListener('click', function () {
+        const list = subBtn.nextElementSibling;
+        if (!list) return;
+        const isOpen = list.classList.toggle('open');
+        subBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
   }
 })();

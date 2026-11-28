@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=17" />
+    <link rel="stylesheet" href="styles.css?v=18" />
   </head>
   <body>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -72,12 +72,55 @@
         <a href="index.html#about" class="mobile-link">About NOREA</a>
         <button type="button" class="mobile-link mobile-accordion-btn" id="mobileVerticalBtn" aria-expanded="false">Business Verticals <span class="dropdown-arrow">&#9660;</span></button>
         <div class="mobile-accordion-body" id="mobileVerticalBody">
-          <a href="education.html" class="mobile-sub-title">&#127979; NOREA Education</a>
-          <a href="education.html#spoken-english" class="mobile-sub-link">Spoken English</a>
-          <a href="events.html" class="mobile-sub-title">&#127881; NOREA Events</a>
-          <a href="events.html#corporate" class="mobile-sub-link">Corporate Events</a>
-          <a href="health.html" class="mobile-sub-title">&#10084; NOREA Health</a>
-          <a href="insurance.html" class="mobile-sub-title">&#128274; NOREA Insurance</a>
+          <div class="mobile-sub-group">
+            <button type="button" class="mobile-sub-accordion-btn" aria-expanded="false">
+              <span>&#127979; NOREA Education</span>
+              <span class="dropdown-arrow">&#9660;</span>
+            </button>
+            <div class="mobile-sub-list">
+              <a href="education.html" class="mobile-sub-link mobile-sub-overview">All NOREA Education &rarr;</a>
+              <a href="education.html#spoken-english" class="mobile-sub-link">Spoken English</a>
+              <a href="education.html#personality" class="mobile-sub-link">Personality Development</a>
+              <a href="education.html#parenting" class="mobile-sub-link">Parenting Programs</a>
+              <a href="education.html#professional" class="mobile-sub-link">Professional Training</a>
+            </div>
+          </div>
+          <div class="mobile-sub-group">
+            <button type="button" class="mobile-sub-accordion-btn" aria-expanded="false">
+              <span>&#127881; NOREA Events</span>
+              <span class="dropdown-arrow">&#9660;</span>
+            </button>
+            <div class="mobile-sub-list">
+              <a href="events.html" class="mobile-sub-link mobile-sub-overview">All NOREA Events &rarr;</a>
+              <a href="events.html#corporate" class="mobile-sub-link">Corporate Events</a>
+              <a href="events.html#educational" class="mobile-sub-link">Educational Events</a>
+              <a href="events.html#social" class="mobile-sub-link">Social Events</a>
+              <a href="events.html#workshops" class="mobile-sub-link">Workshops &amp; Seminars</a>
+            </div>
+          </div>
+          <div class="mobile-sub-group">
+            <button type="button" class="mobile-sub-accordion-btn" aria-expanded="false">
+              <span>&#10084; NOREA Health</span>
+              <span class="dropdown-arrow">&#9660;</span>
+            </button>
+            <div class="mobile-sub-list">
+              <a href="health.html" class="mobile-sub-link mobile-sub-overview">All NOREA Health &rarr;</a>
+              <a href="health.html#awareness" class="mobile-sub-link">Health Awareness Programs</a>
+              <a href="health.html#wellness" class="mobile-sub-link">Wellness Initiatives</a>
+              <a href="health.html#services" class="mobile-sub-link">Health-related Services</a>
+            </div>
+          </div>
+          <div class="mobile-sub-group">
+            <button type="button" class="mobile-sub-accordion-btn" aria-expanded="false">
+              <span>&#128274; NOREA Insurance</span>
+              <span class="dropdown-arrow">&#9660;</span>
+            </button>
+            <div class="mobile-sub-list">
+              <a href="insurance.html" class="mobile-sub-link mobile-sub-overview">All NOREA Insurance &rarr;</a>
+              <a href="insurance.html#guidance" class="mobile-sub-link">Insurance Guidance</a>
+              <a href="insurance.html#services" class="mobile-sub-link">Insurance Services</a>
+            </div>
+          </div>
         </div>
         <a href="index.html#programs" class="mobile-link">Our Services</a>
         <a href="index.html#founders" class="mobile-link">Our Founders</a>
@@ -227,6 +270,6 @@
         <p class="footer-tag-sm">LEARN • EXPRESS • GROW</p>
       </div>
     </footer>
-    <script src="script.js?v=17"></script>
+    <script src="script.js?v=18"></script>
   </body>
 </html>
