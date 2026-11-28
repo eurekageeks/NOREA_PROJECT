@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="theme-color" content="#14b8a6" />
+    <title>NOREA Health – Wellness &amp; Health Awareness | NŌRÉA</title>
+    <meta name="description" content="NOREA Health delivers Health Awareness Programs, Wellness Initiatives and Health-related Services for communities and organisations." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=16" />
+  </head>
+  <body>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="NŌRÉA Home">
+          <span class="logo-mark" aria-hidden="true">✦</span>
+          <span class="logo-text"><span class="logo-name">NŌRÉA</span><span class="logo-sub">LEARN • EXPRESS • GROW</span></span>
+        </a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html#about" class="nav-link">About NOREA</a>
+          <div class="nav-dropdown-wrap">
+            <button type="button" class="nav-link nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" id="verticalDropBtn">Business Verticals <span class="dropdown-arrow">&#9660;</span></button>
+            <div class="nav-dropdown" id="verticalDropMenu" role="menu">
+              <div class="dropdown-col"><a href="education.html" class="dropdown-section-title" role="menuitem"><span class="ds-icon grad-indigo">&#127979;</span> NOREA Education</a><a href="education.html#spoken-english" class="dropdown-item" role="menuitem">Spoken English</a><a href="education.html#personality" class="dropdown-item" role="menuitem">Personality Development</a><a href="education.html#parenting" class="dropdown-item" role="menuitem">Parenting Programs</a><a href="education.html#professional" class="dropdown-item" role="menuitem">Professional Training</a></div>
+              <div class="dropdown-col"><a href="events.html" class="dropdown-section-title" role="menuitem"><span class="ds-icon grad-rose">&#127881;</span> NOREA Events</a><a href="events.html#corporate" class="dropdown-item" role="menuitem">Corporate Events</a><a href="events.html#educational" class="dropdown-item" role="menuitem">Educational Events</a><a href="events.html#social" class="dropdown-item" role="menuitem">Social Events</a><a href="events.html#workshops" class="dropdown-item" role="menuitem">Workshops &amp; Seminars</a></div>
+              <div class="dropdown-col"><a href="health.html" class="dropdown-section-title" role="menuitem"><span class="ds-icon grad-teal">&#10084;</span> NOREA Health</a><a href="health.html#awareness" class="dropdown-item" role="menuitem">Health Awareness Programs</a><a href="health.html#wellness" class="dropdown-item" role="menuitem">Wellness Initiatives</a><a href="health.html#services" class="dropdown-item" role="menuitem">Health-related Services</a></div>
+              <div class="dropdown-col"><a href="insurance.html" class="dropdown-section-title" role="menuitem"><span class="ds-icon grad-amber">&#128274;</span> NOREA Insurance</a><a href="insurance.html#guidance" class="dropdown-item" role="menuitem">Insurance Guidance</a><a href="insurance.html#services" class="dropdown-item" role="menuitem">Insurance Services</a></div>
+            </div>
+          </div>
+          <a href="index.html#programs" class="nav-link">Our Services</a>
+          <a href="index.html#founders" class="nav-link">Our Founders</a>
+          <a href="index.html#contact" class="nav-link">Contact Us</a>
+        </nav>
+        <div class="header-cta"><a href="index.html#enquiry" class="btn btn-primary btn-sm">Enquire Now &rarr;</a></div>
+        <button type="button" id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span id="menuIcon">&#9776;</span></button>
+      </div>
+      <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="index.html#about" class="mobile-link">About NOREA</a>
+        <button type="button" class="mobile-link mobile-accordion-btn" id="mobileVerticalBtn" aria-expanded="false">Business Verticals <span class="dropdown-arrow">&#9660;</span></button>
+        <div class="mobile-accordion-body" id="mobileVerticalBody">
+          <a href="education.html" class="mobile-sub-title">&#127979; NOREA Education</a>
+          <a href="events.html" class="mobile-sub-title">&#127881; NOREA Events</a>
+          <a href="health.html" class="mobile-sub-title">&#10084; NOREA Health</a>
+          <a href="health.html#awareness" class="mobile-sub-link">Health Awareness Programs</a>
+          <a href="insurance.html" class="mobile-sub-title">&#128274; NOREA Insurance</a>
+        </div>
+        <a href="index.html#programs" class="mobile-link">Our Services</a>
+        <a href="index.html#founders" class="mobile-link">Our Founders</a>
+        <a href="index.html#enquiry" class="btn btn-primary btn-full">Enquire Now &rarr;</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="vertical-hero" style="background: linear-gradient(135deg, #134e4a 0%, #0d9488 60%, #14b8a6 100%); min-height: 460px;">
+        <div class="container vertical-hero-content reveal" style="padding-top: 80px; padding-bottom: 60px;">
+          <a href="index.html" class="back-nav" style="color:rgba(255,255,255,0.7);">&#8592; Back to Home</a>
+          <span class="pill-eyebrow" style="background:rgba(255,255,255,0.15);color:#fff;border-color:rgba(255,255,255,0.3);">&#10084; NOREA Health</span>
+          <h1 style="color:#fff; margin-top:16px; font-size: clamp(2rem,5vw,3.2rem); line-height:1.15;">
+            Nurturing <span style="color:#fcd34d;">Health</span> &amp; Wellbeing
+          </h1>
+          <p style="color:rgba(255,255,255,0.85); font-size:1.05rem; max-width:520px; margin-top:16px;">
+            NOREA Health bridges the gap between awareness and action — empowering communities with health knowledge, wellness programs and accessible health-related services.
+          </p>
+          <div style="margin-top:28px; display:flex; gap:16px; flex-wrap:wrap;">
+            <a href="index.html#enquiry" class="btn btn-amber btn-lg">Enquire Now &rarr;</a>
+            <a href="#services" class="btn btn-outline-light btn-lg">Our Health Services</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-head center reveal">
+            <span class="pill-eyebrow">Health Services</span>
+            <h2 class="section-title">Comprehensive health &amp; wellness for every community.</h2>
+            <p class="section-sub">We believe good health begins with awareness. Our programs inspire and support healthier lives.</p>
+          </div>
+
+          <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+            <div class="service-card reveal" id="awareness">
+              <div class="service-card-icon grad-teal">&#128138;</div>
+              <h3>Health Awareness Programs</h3>
+              <p>Community-focused health awareness campaigns and educational programs that promote preventive health, hygiene and healthy lifestyles.</p>
+              <ul style="font-size:0.85rem;color:#6b7280;margin-top:12px;padding-left:18px;line-height:1.8;">
+                <li>Preventive Health Education</li>
+                <li>Community Health Camps</li>
+                <li>Hygiene &amp; Sanitation Awareness</li>
+                <li>Mental Health Awareness</li>
+                <li>Women &amp; Child Health Programs</li>
+              </ul>
+              <a href="index.html#enquiry" class="btn btn-primary btn-sm" style="margin-top:16px;">Learn More &rarr;</a>
+            </div>
+
+            <div class="service-card reveal" id="wellness">
+              <div class="service-card-icon grad-indigo">&#129468;</div>
+              <h3>Wellness Initiatives</h3>
+              <p>Holistic wellness programs for individuals and organisations — stress management, mindfulness, nutrition guidance and healthy habit formation.</p>
+              <ul style="font-size:0.85rem;color:#6b7280;margin-top:12px;padding-left:18px;line-height:1.8;">
+                <li>Stress Management &amp; Mindfulness</li>
+                <li>Nutrition &amp; Diet Guidance</li>
+                <li>Work-Life Balance Workshops</li>
+                <li>Employee Wellness Programs</li>
+                <li>Yoga &amp; Movement Sessions</li>
+              </ul>
+              <a href="index.html#enquiry" class="btn btn-primary btn-sm" style="margin-top:16px;">Learn More &rarr;</a>
+            </div>
+
+            <div class="service-card reveal" id="services-detail">
+              <div class="service-card-icon grad-rose">&#128138;</div>
+              <h3>Health-related Services</h3>
+              <p>Facilitation of accessible health-related services — health check-up camps, referral networks and connections to certified health professionals.</p>
+              <ul style="font-size:0.85rem;color:#6b7280;margin-top:12px;padding-left:18px;line-height:1.8;">
+                <li>Health Check-up Camps</li>
+                <li>Referral to Certified Doctors</li>
+                <li>Health &amp; Wellness Consultation</li>
+                <li>First Aid Awareness</li>
+                <li>Health Resource Guidance</li>
+              </ul>
+              <a href="index.html#enquiry" class="btn btn-primary btn-sm" style="margin-top:16px;">Learn More &rarr;</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section-tinted">
+        <div class="container">
+          <div class="cta-banner reveal">
+            <div class="cta-glow-1"></div><div class="cta-glow-2"></div>
+            <div class="cta-content">
+              <span class="cta-pill">✦ NOREA Health</span>
+              <h2>Take the first step towards a healthier life.</h2>
+              <p>Connect with us for health awareness programs and wellness initiatives in your community or organisation.</p>
+              <div class="btn-row center">
+                <a href="index.html#enquiry" class="btn btn-amber btn-lg">Enquire Now &rarr;</a>
+                <a href="index.html" class="btn btn-outline-light btn-lg">Back to Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-rainbow"></div>
+      <div class="container footer-grid">
+        <div class="footer-col-brand"><a href="index.html" class="logo"><span class="logo-mark" aria-hidden="true">✦</span><span class="logo-text"><span class="logo-name light">NŌRÉA</span><span class="logo-sub amber">LEARN • EXPRESS • GROW</span></span></a><p class="footer-about">NŌRÉA Learning &amp; Development Group — a comprehensive ecosystem for education, events, health and insurance.</p><p class="footer-tag">LEARN • EXPRESS • GROW</p></div>
+        <div class="footer-col-links"><h4 class="footer-heading">Business Verticals</h4><ul class="footer-links"><li><a href="education.html">NOREA Education</a></li><li><a href="events.html">NOREA Events</a></li><li><a href="health.html">NOREA Health</a></li><li><a href="insurance.html">NOREA Insurance</a></li></ul></div>
+        <div class="footer-col-contact"><h4 class="footer-heading">Contact Details</h4><ul class="footer-contact-list"><li class="footer-contact-item"><span class="footer-contact-icon grad-rose" aria-hidden="true">&#9993;</span><div class="footer-contact-body"><span class="footer-contact-label">Email</span><a href="mailto:norea0083@gmail.com" class="footer-contact-val">norea0083@gmail.com</a></div></li><li class="footer-contact-item"><span class="footer-contact-icon grad-teal" aria-hidden="true">&#128222;</span><div class="footer-contact-body"><span class="footer-contact-label">Mobile &amp; WhatsApp</span><div class="footer-phone-links"><a href="tel:+919682818618" class="footer-contact-val">+91 96828 18618</a><a href="https://wa.me/919682818618" target="_blank" rel="noreferrer" class="footer-wa-chip">&#128172; WhatsApp</a></div></div></li><li class="footer-contact-item"><span class="footer-contact-icon grad-indigo" aria-hidden="true">&#128205;</span><div class="footer-contact-body"><span class="footer-contact-label">Address</span><span class="footer-contact-val address">H.NO 273, First Floor Block C, Sector Omicorn-1, Mathurapur, Greater Noida</span></div></li></ul></div>
+      </div>
+      <div class="container footer-bottom"><p>&copy; <span id="year"></span> NŌRÉA Learning &amp; Development Group. All rights reserved. &bull; Developed And Maintained by <strong style="color:#fcd34d;">EGCS.</strong></p><p class="footer-tag-sm">LEARN • EXPRESS • GROW</p></div>
+    </footer>
+    <script src="script.js?v=16"></script>
+  </body>
+</html>
