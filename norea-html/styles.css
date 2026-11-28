@@ -119,6 +119,9 @@ h1, h2, h3, h4 {
   padding: 14px 20px 20px;
   border-top: 1px solid #e0e7ff;
   background: #fff;
+  max-height: calc(100dvh - 66px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .mobile-menu.open { display: flex; }
 .mobile-link {
@@ -1344,40 +1347,65 @@ a.footer-contact-val:hover { color: #fcd34d; }
 .mobile-accordion-btn {
   width: 100%;
   text-align: left;
-  background: none;
+  background: transparent;
   border: none;
   cursor: pointer;
   font: inherit;
-  color: inherit;
+  font-weight: 600;
+  color: #334155;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.mobile-accordion-btn[aria-expanded="true"] {
+  background: #eef2ff;
+  color: #4338ca;
+}
+.mobile-accordion-btn[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+}
 .mobile-accordion-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease;
-  background: rgba(255,255,255,0.05);
-  border-radius: 10px;
-  margin: 0 -8px;
+  transition: max-height 0.35s ease, padding 0.25s ease;
+  background: #f8faff;
+  border-radius: 14px;
+  margin: 0;
+  padding: 0 12px;
 }
-.mobile-accordion-body.open { max-height: 600px; }
+.mobile-accordion-body.open {
+  max-height: 1000px;
+  padding: 6px 12px 12px;
+  border: 1px solid #e0e7ff;
+}
 .mobile-sub-title {
   display: block;
   font-weight: 700;
-  font-size: 0.82rem;
-  color: #c7d2fe;
-  padding: 8px 16px 4px;
+  font-size: 0.88rem;
+  color: var(--ink);
+  padding: 10px 8px 4px;
+  margin-top: 6px;
+  border-top: 1px solid #e2e8f0;
   text-decoration: none;
+}
+.mobile-sub-title:first-child {
+  margin-top: 0;
+  border-top: none;
 }
 .mobile-sub-link {
   display: block;
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.65);
-  padding: 4px 16px 4px 24px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: #475569;
+  padding: 6px 8px 6px 26px;
+  border-radius: 8px;
   text-decoration: none;
 }
-.mobile-sub-link:hover { color: #fff; }
+.mobile-sub-link:hover,
+.mobile-sub-link:active {
+  background: #eef2ff;
+  color: var(--indigo);
+}
 
 /* ============================================================
    BUSINESS VERTICALS OVERVIEW SECTION
