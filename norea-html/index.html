@@ -4,45 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="theme-color" content="#4F46E5" />
-    <title>NŌRÉA – Learning &amp; Development | Learn • Express • Grow</title>
+    <meta name="theme-color" content="#1e1b4b" />
+    <title>NOREA – International Learning &amp; Development Group | Learn • Express • Grow</title>
     <meta
       name="description"
-      content="NŌRÉA – Learning & Development. Spoken English & Communication, Personality Development, and Parenting & Child Development. Building Confidence. Nurturing Potential."
+      content="NOREA – International Learning & Development Group. A premier multi-sector business brand spanning NOREA Education, NOREA Events, NOREA Health, and NOREA Insurance across India and international markets."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=13" />
+    <link rel="stylesheet" href="styles.css?v=20" />
   </head>
   <body>
     <!-- Toast -->
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
+    <!-- TOP INTERNATIONAL ANNOUNCEMENT BAR -->
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-globe">&#127760;</span>
+          <span data-i18n="topbar_text">NOREA – International Learning &amp; Development Group &bull; India &amp; Global Markets</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="mailto:norea0083@gmail.com" class="top-bar-link">&#9993; norea0083@gmail.com</a>
+          <a href="tel:+919682818618" class="top-bar-link">&#128222; +91 96828 18618</a>
+          <div class="lang-switch" role="group" aria-label="Language Switcher">
+            <button type="button" class="lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="hi">हिंदी</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- HEADER -->
     <header class="site-header">
       <div class="container header-inner">
-        <a href="#home" class="logo" aria-label="NŌRÉA Home">
+        <a href="index.html#home" class="logo" aria-label="NOREA Home">
           <span class="logo-mark" aria-hidden="true">✦</span>
           <span class="logo-text">
-            <span class="logo-name">NŌRÉA</span>
-            <span class="logo-sub">LEARNING &amp; DEVELOPMENT</span>
+            <span class="logo-name">NOREA</span>
+            <span class="logo-sub" data-i18n="brand_sub">INTERNATIONAL LEARNING &amp; DEVELOPMENT GROUP</span>
           </span>
         </a>
 
         <nav class="nav-desktop" aria-label="Primary">
-          <a href="#home" class="nav-link active">Home</a>
-          <a href="#about" class="nav-link">About Us</a>
-          <a href="#programs" class="nav-link">Our Programs</a>
-          <a href="#why-norea" class="nav-link">Why NŌRÉA</a>
-          <a href="#contact" class="nav-link">Contact Us</a>
+          <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
+          <a href="#about" class="nav-link" data-i18n="nav_about">About NOREA</a>
+          <div class="nav-dropdown-wrap">
+            <a href="#services" class="nav-link" data-i18n="nav_services">Our Services &#9662;</a>
+            <div class="nav-dropdown">
+              <a href="education.html" class="dropdown-item">
+                <span class="drop-dot grad-indigo"></span>
+                <div>
+                  <strong>NOREA Education</strong>
+                  <small>Spoken English, Personality, Parenting &amp; Training</small>
+                </div>
+              </a>
+              <a href="events.html" class="dropdown-item">
+                <span class="drop-dot grad-amber"></span>
+                <div>
+                  <strong>NOREA Events</strong>
+                  <small>Corporate, Educational, Social &amp; Seminars</small>
+                </div>
+              </a>
+              <a href="health.html" class="dropdown-item">
+                <span class="drop-dot grad-teal"></span>
+                <div>
+                  <strong>NOREA Health</strong>
+                  <small>Health Awareness &amp; Holistic Wellness Initiatives</small>
+                </div>
+              </a>
+              <a href="insurance.html" class="dropdown-item">
+                <span class="drop-dot grad-rose"></span>
+                <div>
+                  <strong>NOREA Insurance</strong>
+                  <small>Insurance Guidance via Authorized Partners</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="#founders" class="nav-link" data-i18n="nav_founders">Our Founders</a>
+          <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact Us</a>
         </nav>
 
         <div class="header-cta">
-          <a href="#enquiry" class="btn btn-primary btn-sm">Enquire Now &rarr;</a>
+          <div class="lang-switch mobile-hide-sm" role="group" aria-label="Language Switcher">
+            <button type="button" class="lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="hi">हिंदी</button>
+          </div>
+          <a href="#enquiry" class="btn btn-primary btn-sm" data-i18n="nav_register">Register / Enquire &rarr;</a>
         </div>
 
         <button type="button" id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -51,46 +105,79 @@
       </div>
 
       <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile Navigation">
-        <a href="#home" class="mobile-link">Home</a>
-        <a href="#about" class="mobile-link">About Us</a>
-        <a href="#programs" class="mobile-link">Our Programs</a>
-        <a href="#why-norea" class="mobile-link">Why NŌRÉA</a>
-        <a href="#contact" class="mobile-link">Contact Us</a>
-        <a href="#enquiry" class="btn btn-primary btn-full">Enquire Now &rarr;</a>
+        <div class="mobile-lang-row">
+          <span>Language / भाषा:</span>
+          <div class="lang-switch">
+            <button type="button" class="lang-btn active" data-lang="en">English</button>
+            <button type="button" class="lang-btn" data-lang="hi">हिंदी</button>
+          </div>
+        </div>
+        <a href="#home" class="mobile-link" data-i18n="nav_home">Home</a>
+        <a href="#about" class="mobile-link" data-i18n="nav_about">About NOREA</a>
+        <a href="#services" class="mobile-link" data-i18n="nav_services">Our Services (All Verticals)</a>
+        <div class="mobile-sublinks">
+          <a href="education.html" class="mobile-sublink">&bull; NOREA Education</a>
+          <a href="events.html" class="mobile-sublink">&bull; NOREA Events</a>
+          <a href="health.html" class="mobile-sublink">&bull; NOREA Health</a>
+          <a href="insurance.html" class="mobile-sublink">&bull; NOREA Insurance</a>
+        </div>
+        <a href="#founders" class="mobile-link" data-i18n="nav_founders">Our Founders</a>
+        <a href="#contact" class="mobile-link" data-i18n="nav_contact">Contact Us</a>
+        <a href="#enquiry" class="btn btn-primary btn-full" data-i18n="nav_register">Online Registration &amp; Enquiry &rarr;</a>
       </nav>
     </header>
 
     <main>
-      <!-- HERO SECTION -->
+      <!-- 1. HERO SECTION -->
       <section id="home" class="hero-mesh hero-section">
         <div class="container hero-grid">
           <div class="hero-copy reveal">
-            <span class="pill-eyebrow">✦ Learn • Express • Grow</span>
-            <h1 class="display-title">
-              Building <span class="text-gradient">Confidence.</span> Nurturing Potential.
-            </h1>
-            <p class="lead">
-              A colourful, welcoming space for students and families to master Spoken English, shine in Personality
-              Development, and build joyful Parenting habits.
-            </p>
-            <div class="btn-row">
-              <a href="#programs" class="btn btn-primary btn-lg">Explore Programs &rarr;</a>
-              <a href="#enquiry" class="btn btn-amber btn-lg">Quick Enquiry</a>
+            <div class="brand-badge-row">
+              <span class="pill-eyebrow" data-i18n="hero_tagline">✦ Learn • Express • Grow</span>
+              <span class="pill-global" data-i18n="hero_positioning">International Learning &amp; Development Group</span>
             </div>
+            <h1 class="display-title" data-i18n="hero_title">
+              Empowering Lives Across <span class="text-gradient">Education, Events,</span> Health &amp; Insurance.
+            </h1>
+            <p class="lead" data-i18n="hero_lead">
+              NOREA is an international-level multi-sector business group dedicated to human capability, memorable
+              experiences, holistic well-being, and trusted financial protection across India and global markets.
+            </p>
+
+            <!-- Quick Sector Switcher Pills -->
+            <div class="sector-quick-pills">
+              <a href="education.html" class="sector-pill pill-edu">
+                <span class="sector-pill-dot"></span> NOREA Education &rarr;
+              </a>
+              <a href="events.html" class="sector-pill pill-evt">
+                <span class="sector-pill-dot"></span> NOREA Events &rarr;
+              </a>
+              <a href="health.html" class="sector-pill pill-hlt">
+                <span class="sector-pill-dot"></span> NOREA Health &rarr;
+              </a>
+              <a href="insurance.html" class="sector-pill pill-ins">
+                <span class="sector-pill-dot"></span> NOREA Insurance &rarr;
+              </a>
+            </div>
+
+            <div class="btn-row">
+              <a href="#services" class="btn btn-primary btn-lg" data-i18n="hero_btn_explore">Explore 4 Business Verticals &rarr;</a>
+              <a href="#enquiry" class="btn btn-amber btn-lg" data-i18n="hero_btn_register">Course Registration &amp; Enquiry</a>
+            </div>
+
             <div class="chip-row">
-              <span class="chip"><span class="check-dot">&#10003;</span> Practical learning</span>
-              <span class="chip"><span class="check-dot">&#10003;</span> Interactive sessions</span>
-              <span class="chip"><span class="check-dot">&#10003;</span> Personal attention</span>
-              <span class="chip"><span class="check-dot">&#10003;</span> Confidence building</span>
-              <span class="chip"><span class="check-dot">&#10003;</span> Friendly mentors</span>
+              <span class="chip"><span class="check-dot">&#10003;</span> <span data-i18n="chip_1">4 Specialized Business Verticals</span></span>
+              <span class="chip"><span class="check-dot">&#10003;</span> <span data-i18n="chip_2">India &amp; International Presence</span></span>
+              <span class="chip"><span class="check-dot">&#10003;</span> <span data-i18n="chip_3">Online Course Registration</span></span>
+              <span class="chip"><span class="check-dot">&#10003;</span> <span data-i18n="chip_4">Instant WhatsApp &amp; Email Alerts</span></span>
             </div>
           </div>
 
           <div class="hero-media reveal">
             <div class="hero-glow"></div>
 
-            <!-- COLOURFUL 2-VIDEO SLIDER: PERSONALITY DEVELOPMENT CLASSES -->
-            <div class="video-slider" id="heroVideoSlider" aria-roledescription="carousel" aria-label="Personality Development Classroom Videos">
+            <!-- COLOURFUL 2-VIDEO SLIDER: TRAINING & EXCELLENCE IN ACTION -->
+            <div class="video-slider" id="heroVideoSlider" aria-roledescription="carousel" aria-label="NOREA Training and Development Videos">
               <div class="video-slider-rainbow"></div>
 
               <div class="video-slides">
@@ -98,9 +185,9 @@
                 <div class="video-slide active" data-slide="0">
                   <div class="video-top-badges">
                     <span class="video-pill grad-rose">
-                      <span class="live-dot"></span> Clip 1 / 2 • Personality Development
+                      <span class="live-dot"></span> Clip 1 / 2 • NOREA Education
                     </span>
-                    <span class="video-tag-pill">Confidence &amp; Body Language</span>
+                    <span class="video-tag-pill">Personality &amp; Executive Presence</span>
                   </div>
                   <video
                     class="hero-video"
@@ -113,9 +200,9 @@
                   ></video>
                   <div class="video-caption-overlay">
                     <div class="video-caption-text">
-                      <span class="video-caption-eyebrow">✦ Classroom Training Session</span>
-                      <h3>Teacher Coaching Students in Stage Presence &amp; Expression</h3>
-                      <p>Interactive personality development session building eye contact, posture &amp; vocal confidence.</p>
+                      <span class="video-caption-eyebrow">✦ International Learning &amp; Development</span>
+                      <h3>Expert Mentors Training Students in Confidence &amp; Expression</h3>
+                      <p>World-class Spoken English, Personality Development &amp; Professional Training programs.</p>
                     </div>
                   </div>
                 </div>
@@ -124,9 +211,9 @@
                 <div class="video-slide" data-slide="1">
                   <div class="video-top-badges">
                     <span class="video-pill grad-indigo">
-                      <span class="live-dot"></span> Clip 2 / 2 • Personality Development
+                      <span class="live-dot"></span> Clip 2 / 2 • Leadership &amp; Seminars
                     </span>
-                    <span class="video-tag-pill">Leadership &amp; Communication</span>
+                    <span class="video-tag-pill">Interactive Workshops</span>
                   </div>
                   <video
                     class="hero-video"
@@ -138,9 +225,9 @@
                   ></video>
                   <div class="video-caption-overlay">
                     <div class="video-caption-text">
-                      <span class="video-caption-eyebrow">✦ Practical Group Workshop</span>
-                      <h3>Mentor Guiding Students in Interactive Personality Workshop</h3>
-                      <p>Hands-on mentoring where trainers guide students through real-world presentation &amp; teamwork skills.</p>
+                      <span class="video-caption-eyebrow">✦ Multi-Sector Excellence</span>
+                      <h3>Transforming Individuals, Corporates &amp; Communities</h3>
+                      <p>Spanning Education, Corporate &amp; Educational Events, Wellness, and Insurance Guidance.</p>
                     </div>
                   </div>
                 </div>
@@ -162,15 +249,15 @@
                 <button type="button" class="video-tab active" data-target="0" role="tab" aria-selected="true">
                   <span class="video-tab-icon grad-rose">&#9654;</span>
                   <span class="video-tab-info">
-                    <strong>Clip 1: Confidence Training</strong>
-                    <small>Teacher coaching body language</small>
+                    <strong>Clip 1: Confidence &amp; Communication</strong>
+                    <small>NOREA Education &amp; Training</small>
                   </span>
                 </button>
                 <button type="button" class="video-tab" data-target="1" role="tab" aria-selected="false">
                   <span class="video-tab-icon grad-indigo">&#9654;</span>
                   <span class="video-tab-info">
-                    <strong>Clip 2: Personality Workshop</strong>
-                    <small>Interactive student mentoring</small>
+                    <strong>Clip 2: Workshops &amp; Seminars</strong>
+                    <small>Interactive Global Mentoring</small>
                   </span>
                 </button>
               </div>
@@ -179,67 +266,71 @@
         </div>
       </section>
 
-      <!-- OUR PROGRAMS -->
-      <section id="programs" class="section">
-        <div class="container">
-          <div class="section-head center reveal">
-            <span class="pill-eyebrow">Our Programs</span>
-            <h2 class="section-title">Colourful learning journeys for every student.</h2>
-            <p class="section-sub">
-              Pick a program that matches your goals — Spoken English, Personality Development, or Parenting &amp; Child
-              Development.
-            </p>
-          </div>
-
-          <div id="programsGrid" class="programs-grid"></div>
-        </div>
-      </section>
-
-      <!-- ABOUT US -->
+      <!-- 2. ABOUT NOREA -->
       <section id="about" class="section section-tinted">
         <div class="container">
           <div class="about-grid">
             <div class="about-photo reveal" id="aboutPhotoCard">
               <img
                 src="images/about.jpg"
-                alt="Friendly mentoring at NŌRÉA"
+                alt="Friendly mentoring at NOREA"
                 id="aboutSourceImg"
                 class="about-source-img"
               />
               <canvas
                 id="aboutLiveCanvas"
                 class="about-live-canvas"
-                aria-label="Video of mentor politely explaining to student at NŌRÉA"
+                aria-label="Video of mentor politely explaining to student at NOREA"
               ></canvas>
             </div>
             <div class="about-copy reveal">
-              <span class="pill-eyebrow">About NŌRÉA</span>
-              <h2 class="section-title">A joyful space for real personal transformation.</h2>
-              <p class="body-text">
-                NŌRÉA is dedicated to helping students and individuals develop communication skills, confidence,
-                personality, and positive relationships.
+              <span class="pill-eyebrow" data-i18n="about_eyebrow">About NOREA</span>
+              <h2 class="section-title" data-i18n="about_title">
+                An International Learning &amp; Development Group Built for Global Impact.
+              </h2>
+              <p class="body-text" data-i18n="about_p1">
+                Anchored by our core philosophy — <strong>Learn • Express • Grow</strong> — NOREA has evolved into a
+                dynamic, multi-sector enterprise delivering excellence across <strong>Education, Events, Health, and
+                Insurance</strong>.
               </p>
-              <p class="muted-text">
-                We bring together engaging Spoken English training, uplifting Personality Development, and thoughtful
-                Parenting education in a warm, encouraging student-first environment.
+              <p class="muted-text" data-i18n="about_p2">
+                We combine international standards of training, corporate event curation, preventive health &amp;
+                wellness awareness, and reliable insurance guidance through authorized partners to empower students,
+                families, professionals, and organizations across India and global markets.
               </p>
 
               <div class="mv-grid">
                 <div class="card mv-card">
                   <span class="mv-icon grad-indigo">&#129517;</span>
-                  <h3>Our Mission</h3>
-                  <p>
-                    To empower every student with the communication skills, self-belief, and emotional awareness they
-                    need to express themselves boldly and grow with joy.
+                  <h3 data-i18n="mission_title">Our Mission</h3>
+                  <p data-i18n="mission_desc">
+                    To empower individuals, families, and enterprises with world-class communication skills, impactful
+                    events, preventive wellness, and trusted advisory services that inspire lifelong confidence.
                   </p>
                 </div>
                 <div class="card mv-card">
-                  <span class="mv-icon grad-rose">&#127775;</span>
-                  <h3>Our Vision</h3>
-                  <p>
-                    To be a vibrant, trusted learning community where young minds and families discover their brightest
-                    potential.
+                  <span class="mv-icon grad-rose">&#127760;</span>
+                  <h3 data-i18n="vision_title">Our Global Vision</h3>
+                  <p data-i18n="vision_desc">
+                    To establish NOREA as a globally respected, multi-sector brand expanding seamlessly across India and
+                    international markets while nurturing human potential at every stage of life.
                   </p>
+                </div>
+              </div>
+
+              <!-- Global Scalability Metrics Strip -->
+              <div class="about-stats-strip">
+                <div class="about-stat">
+                  <strong>4+</strong>
+                  <span data-i18n="stat_verticals">Core Business Verticals</span>
+                </div>
+                <div class="about-stat">
+                  <strong>15+</strong>
+                  <span data-i18n="stat_programs">Specialized Programs &amp; Solutions</span>
+                </div>
+                <div class="about-stat">
+                  <strong>Global</strong>
+                  <span data-i18n="stat_markets">India &amp; International Reach</span>
                 </div>
               </div>
             </div>
@@ -247,53 +338,379 @@
         </div>
       </section>
 
-      <!-- WHY CHOOSE NŌRÉA -->
+      <!-- 3. OUR SERVICES – 4 BUSINESS VERTICALS + FUTURE EXPANSION -->
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-head center reveal">
+            <span class="pill-eyebrow" data-i18n="services_eyebrow">Our Services &amp; Business Verticals</span>
+            <h2 class="section-title" data-i18n="services_title">
+              Four Pillars of Excellence. One Unified Global Brand.
+            </h2>
+            <p class="section-sub" data-i18n="services_sub">
+              Explore NOREA’s four dedicated business sectors — each crafted with international quality, specialized
+              expertise, and a commitment to helping you Learn, Express, and Grow.
+            </p>
+          </div>
+
+          <!-- 4 BUSINESS VERTICALS GRID -->
+          <div class="verticals-grid">
+            <!-- Vertical 1: NOREA Education -->
+            <article class="card vertical-card vertical-edu reveal">
+              <div class="prog-rainbow-bar"></div>
+              <div class="vertical-media">
+                <video
+                  class="prog-video"
+                  src="https://assets.mixkit.co/videos/4809/4809-720.mp4"
+                  poster="images/program-spoken-english.jpg"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="metadata"
+                ></video>
+                <div class="prog-overlay"></div>
+                <span class="prog-badge grad-indigo">01 • Flagship Vertical</span>
+                <span class="prog-live-pill"><span class="live-dot"></span> Online &amp; In-Person</span>
+              </div>
+              <div class="vertical-body">
+                <div class="vertical-header-row">
+                  <span class="vertical-icon grad-indigo">&#127891;</span>
+                  <div>
+                    <span class="vertical-kicker">Learning &amp; Capability</span>
+                    <h3 class="vertical-title" data-i18n="v1_title">NOREA Education</h3>
+                  </div>
+                </div>
+                <p class="vertical-desc" data-i18n="v1_desc">
+                  World-class communication, confidence, parenting, and executive training programs tailored for
+                  students, parents, and working professionals.
+                </p>
+                <ul class="vertical-service-list">
+                  <li><span class="ok">&#10003;</span> <strong>Spoken English</strong> — Fluency, Grammar, Public Speaking &amp; Interviews</li>
+                  <li><span class="ok">&#10003;</span> <strong>Personality Development</strong> — Confidence, Body Language &amp; Leadership</li>
+                  <li><span class="ok">&#10003;</span> <strong>Parenting Programs</strong> — Child Psychology &amp; Positive Parenting Habits</li>
+                  <li><span class="ok">&#10003;</span> <strong>Professional Training</strong> — Corporate Communication &amp; Career Poise</li>
+                </ul>
+                <div class="vertical-actions">
+                  <a href="education.html" class="btn btn-outline btn-sm">Explore Sector Page &rarr;</a>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-select-vertical="NOREA Education"
+                    data-select-service="Spoken English & Communication"
+                  >
+                    Register Course &rarr;
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Vertical 2: NOREA Events -->
+            <article class="card vertical-card vertical-evt reveal">
+              <div class="prog-rainbow-bar"></div>
+              <div class="vertical-media">
+                <video
+                  class="prog-video"
+                  src="https://assets.mixkit.co/videos/6636/6636-720.mp4"
+                  poster="images/program-personality-development.jpg"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="metadata"
+                ></video>
+                <div class="prog-overlay"></div>
+                <span class="prog-badge grad-amber">02 • Conferences &amp; Experiences</span>
+                <span class="prog-live-pill"><span class="live-dot"></span> End-to-End Curation</span>
+              </div>
+              <div class="vertical-body">
+                <div class="vertical-header-row">
+                  <span class="vertical-icon grad-amber">&#127908;</span>
+                  <div>
+                    <span class="vertical-kicker">Conferences &amp; Celebrations</span>
+                    <h3 class="vertical-title" data-i18n="v2_title">NOREA Events</h3>
+                  </div>
+                </div>
+                <p class="vertical-desc" data-i18n="v2_desc">
+                  High-impact event strategy, planning, and execution across corporate forums, academic institutions,
+                  social gatherings, and knowledge seminars.
+                </p>
+                <ul class="vertical-service-list">
+                  <li><span class="ok">&#10003;</span> <strong>Corporate Events</strong> — Summits, Leadership Meets &amp; Brand Launches</li>
+                  <li><span class="ok">&#10003;</span> <strong>Educational Events</strong> — Academic Conclaves, Youth Fests &amp; Competitions</li>
+                  <li><span class="ok">&#10003;</span> <strong>Social Events</strong> — Community Gatherings &amp; Cultural Celebrations</li>
+                  <li><span class="ok">&#10003;</span> <strong>Workshops &amp; Seminars</strong> — Expert Panels &amp; Interactive Training Bootcamps</li>
+                </ul>
+                <div class="vertical-actions">
+                  <a href="events.html" class="btn btn-outline btn-sm">Explore Sector Page &rarr;</a>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-select-vertical="NOREA Events"
+                    data-select-service="Corporate Events"
+                  >
+                    Book an Event &rarr;
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Vertical 3: NOREA Health -->
+            <article class="card vertical-card vertical-hlt reveal">
+              <div class="prog-rainbow-bar"></div>
+              <div class="vertical-media">
+                <video
+                  class="prog-video"
+                  src="https://assets.mixkit.co/videos/4790/4790-720.mp4"
+                  poster="images/program-parenting.jpg"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="metadata"
+                ></video>
+                <div class="prog-overlay"></div>
+                <span class="prog-badge grad-teal">03 • Preventive Wellness</span>
+                <span class="prog-live-pill"><span class="live-dot"></span> Holistic Care</span>
+              </div>
+              <div class="vertical-body">
+                <div class="vertical-header-row">
+                  <span class="vertical-icon grad-teal">&#129658;</span>
+                  <div>
+                    <span class="vertical-kicker">Mind &amp; Body Vitality</span>
+                    <h3 class="vertical-title" data-i18n="v3_title">NOREA Health</h3>
+                  </div>
+                </div>
+                <p class="vertical-desc" data-i18n="v3_desc">
+                  Promoting healthier lifestyles, preventive awareness, mental resilience, and accessible community
+                  wellness initiatives for families and organizations.
+                </p>
+                <ul class="vertical-service-list">
+                  <li><span class="ok">&#10003;</span> <strong>Health Awareness Programs</strong> — Preventive Care &amp; Community Drives</li>
+                  <li><span class="ok">&#10003;</span> <strong>Wellness Initiatives</strong> — Stress Management, Mindfulness &amp; Lifestyle Coaching</li>
+                  <li><span class="ok">&#10003;</span> <strong>Health-related Services</strong> — Wellness Camps &amp; Guidance Support</li>
+                </ul>
+                <div class="vertical-actions">
+                  <a href="health.html" class="btn btn-outline btn-sm">Explore Sector Page &rarr;</a>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-select-vertical="NOREA Health"
+                    data-select-service="Health Awareness Programs"
+                  >
+                    Enquire Now &rarr;
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Vertical 4: NOREA Insurance -->
+            <article class="card vertical-card vertical-ins reveal">
+              <div class="prog-rainbow-bar"></div>
+              <div class="vertical-media">
+                <video
+                  class="prog-video"
+                  src="https://assets.mixkit.co/videos/4813/4813-720.mp4"
+                  poster="images/why-norea.jpg"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="metadata"
+                ></video>
+                <div class="prog-overlay"></div>
+                <span class="prog-badge grad-rose">04 • Protection &amp; Advisory</span>
+                <span class="prog-live-pill"><span class="live-dot"></span> Authorized Partners</span>
+              </div>
+              <div class="vertical-body">
+                <div class="vertical-header-row">
+                  <span class="vertical-icon grad-rose">&#128737;</span>
+                  <div>
+                    <span class="vertical-kicker">Security &amp; Peace of Mind</span>
+                    <h3 class="vertical-title" data-i18n="v4_title">NOREA Insurance</h3>
+                  </div>
+                </div>
+                <p class="vertical-desc" data-i18n="v4_desc">
+                  Transparent, customer-first insurance education and seamless facilitation delivered through certified
+                  and authorized insurance partners.
+                </p>
+                <ul class="vertical-service-list">
+                  <li><span class="ok">&#10003;</span> <strong>Insurance Guidance</strong> — Personalized Need Analysis &amp; Policy Literacy</li>
+                  <li><span class="ok">&#10003;</span> <strong>Insurance-related Services through Authorized Partners</strong> — Health, Life &amp; Asset Protection Assistance</li>
+                </ul>
+                <div class="vertical-actions">
+                  <a href="insurance.html" class="btn btn-outline btn-sm">Explore Sector Page &rarr;</a>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-select-vertical="NOREA Insurance"
+                    data-select-service="Insurance Guidance"
+                  >
+                    Get Guidance &rarr;
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- FEATURED EDUCATION PROGRAMS QUICK SHOWCASE -->
+          <div class="sub-showcase reveal" style="margin-top: 56px;">
+            <div class="section-head center" style="margin-bottom: 32px;">
+              <span class="pill-eyebrow">NOREA Education Flagship Courses</span>
+              <h3 class="section-title" style="font-size: clamp(1.7rem, 3.6vw, 2.4rem);">
+                Featured Learning &amp; Development Programs
+              </h3>
+              <p class="section-sub">
+                Direct online registration available for our core Spoken English, Personality Development, Parenting, and
+                Professional Training tracks.
+              </p>
+            </div>
+            <div id="programsGrid" class="programs-grid"></div>
+          </div>
+
+          <!-- 5. FUTURE EXPANSION & SCALABILITY BANNER -->
+          <div class="expansion-card reveal">
+            <div class="expansion-badge">✦ Scalable Multi-Sector Architecture</div>
+            <div class="expansion-grid">
+              <div>
+                <h3 data-i18n="exp_title">Built for Expansion Across India &amp; International Markets</h3>
+                <p data-i18n="exp_desc">
+                  NOREA’s modular multi-sector ecosystem is engineered to scale rapidly across major Indian metros and
+                  global hubs — ready to integrate upcoming business divisions, digital learning platforms, and
+                  international partnerships.
+                </p>
+              </div>
+              <div class="expansion-pills">
+                <span class="exp-pill">&#127470;&#127475; Pan-India Network</span>
+                <span class="exp-pill">&#127757; International Markets</span>
+                <span class="exp-pill">&#128640; Future Business Sectors Ready</span>
+                <span class="exp-pill">&#128179; Online Payment Gateway (Phase 2)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. OUR FOUNDERS (EQUAL IMPORTANCE & VISIBILITY FOR BOTH CO-FOUNDERS) -->
+      <section id="founders" class="section section-tinted">
+        <div class="container">
+          <div class="section-head center reveal">
+            <span class="pill-eyebrow" data-i18n="founders_eyebrow">Leadership &amp; Vision</span>
+            <h2 class="section-title" data-i18n="founders_title">Our Founders</h2>
+            <p class="section-sub" data-i18n="founders_shared_vision">
+              Together, they are building NOREA with a vision to create an impactful brand across India and
+              international markets.
+            </p>
+          </div>
+
+          <div class="founders-grid">
+            <!-- Co-Founder 1: Nutan -->
+            <article class="card founder-card reveal">
+              <div class="founder-top-bar grad-indigo"></div>
+              <div class="founder-header">
+                <div class="founder-monogram grad-indigo" aria-hidden="true">
+                  <span>N</span>
+                </div>
+                <div class="founder-title-wrap">
+                  <span class="founder-role-badge tag-indigo" data-i18n="cofounder_badge">Co-Founder &bull; NOREA</span>
+                  <h3 class="founder-name" data-i18n="nutan_name">Nutan</h3>
+                  <p class="founder-designation" data-i18n="nutan_role">Co-Founder</p>
+                </div>
+              </div>
+              <p class="founder-bio" data-i18n="nutan_bio">
+                Leading the brand vision, learning initiatives, academic development and overall brand growth.
+              </p>
+              <div class="founder-focus-tags">
+                <span class="topic-tag tag-indigo">Brand Vision</span>
+                <span class="topic-tag tag-indigo">Learning Initiatives</span>
+                <span class="topic-tag tag-indigo">Academic Development</span>
+                <span class="topic-tag tag-indigo">Overall Brand Growth</span>
+              </div>
+            </article>
+
+            <!-- Co-Founder 2: Ratan -->
+            <article class="card founder-card reveal">
+              <div class="founder-top-bar grad-rose"></div>
+              <div class="founder-header">
+                <div class="founder-monogram grad-rose" aria-hidden="true">
+                  <span>R</span>
+                </div>
+                <div class="founder-title-wrap">
+                  <span class="founder-role-badge tag-rose" data-i18n="cofounder_badge">Co-Founder &bull; NOREA</span>
+                  <h3 class="founder-name" data-i18n="ratan_name">Ratan</h3>
+                  <p class="founder-designation" data-i18n="ratan_role">Co-Founder</p>
+                </div>
+              </div>
+              <p class="founder-bio" data-i18n="ratan_bio">
+                Contributing to business strategy, operations, partnerships and organisational development.
+              </p>
+              <div class="founder-focus-tags">
+                <span class="topic-tag tag-rose">Business Strategy</span>
+                <span class="topic-tag tag-rose">Operations Excellence</span>
+                <span class="topic-tag tag-rose">Strategic Partnerships</span>
+                <span class="topic-tag tag-rose">Organisational Development</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Shared Founders Vision Callout -->
+          <div class="founders-shared-banner reveal">
+            <span class="shared-icon">✦</span>
+            <p data-i18n="founders_banner_quote">
+              “Together, Nutan and Ratan are building <strong>NOREA – International Learning &amp; Development Group</strong>
+              with equal dedication and a shared commitment to creating a trusted, high-impact brand across India and
+              international markets.”
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE NOREA -->
       <section id="why-norea" class="section">
         <div class="container">
           <div class="section-head reveal">
-            <span class="pill-eyebrow">Why Students Love NŌRÉA</span>
-            <h2 class="section-title">Confidence that shines inside and outside the classroom.</h2>
+            <span class="pill-eyebrow">Why Choose NOREA</span>
+            <h2 class="section-title">International standards of excellence inside and outside the classroom.</h2>
           </div>
 
           <div class="why-grid">
             <article class="why-card tint-indigo reveal">
               <div class="why-icon grad-indigo">&#128214;</div>
-              <h3>Practical Learning</h3>
+              <h3>Practical &amp; Experiential Learning</h3>
               <p>
-                Every session is built around real-world conversations, presentations and fun everyday scenarios — never
-                boring memorisation.
+                Every session and workshop is built around real-world communication, leadership simulations, and
+                practical transformation.
               </p>
             </article>
             <article class="why-card tint-rose reveal">
-              <div class="why-icon grad-rose">&#128101;</div>
-              <h3>Interactive Sessions</h3>
+              <div class="why-icon grad-rose">&#127760;</div>
+              <h3>Multi-Sector International Brand</h3>
               <p>
-                Lively group discussions, guided role-plays and collaborative games keep students actively participating
-                from day one.
+                One unified, trusted brand ecosystem serving your Education, Events, Health &amp; Wellness, and
+                Insurance guidance needs.
               </p>
             </article>
             <article class="why-card tint-amber reveal">
               <div class="why-icon grad-amber">&#129309;</div>
-              <h3>Personal Attention</h3>
+              <h3>Personal Attention &amp; Advisory</h3>
               <p>
-                Friendly, small-group batches ensure every learner gets individual feedback, encouragement and space to
-                shine.
+                Small-batch mentoring in Education, bespoke curation in Events, and dedicated guidance across Health and
+                Authorized Insurance partners.
               </p>
             </article>
             <article class="why-card tint-teal reveal">
               <div class="why-icon grad-teal">&#10024;</div>
-              <h3>Confidence-Building Activities</h3>
+              <h3>Confidence &amp; Holistic Growth</h3>
               <p>
-                Step-by-step speaking practice, stage presence exercises and creative milestones help students overcome
-                shyness naturally.
+                Structured milestones that build stage presence, executive poise, emotional intelligence, and family
+                well-being.
               </p>
             </article>
             <article class="why-card tint-violet reveal">
               <div class="why-icon grad-violet">&#127942;</div>
-              <h3>Experienced Trainers</h3>
+              <h3>Experienced Trainers &amp; Partners</h3>
               <p>
-                Warm, supportive mentors bring patience, structure and enthusiasm to every class — nurturing both skill
-                and self-belief.
+                Seasoned educators, event specialists, wellness mentors, and authorized insurance partners committed to
+                your success.
               </p>
             </article>
             <article class="why-photo-card reveal">
@@ -312,29 +729,44 @@
         </div>
       </section>
 
-      <!-- SIMPLE ENQUIRY FORM -->
+      <!-- 6. ONLINE COURSE REGISTRATION, MULTI-SECTOR ENQUIRY & PAYMENT FACILITY (FUTURE PHASE) -->
       <section id="enquiry" class="section section-tinted">
         <div class="container enquiry-grid">
           <div class="enquiry-side reveal">
-            <span class="pill-eyebrow">Instant Notification</span>
-            <h2 class="section-title">Enquire in 30 seconds — get WhatsApp &amp; Email updates!</h2>
-            <p class="body-text">
-              No account creation or complicated forms. Simply submit your enquiry and receive immediate WhatsApp and
-              Email confirmation with your reference number.
+            <span class="pill-eyebrow" data-i18n="enq_eyebrow">Online Registration &amp; Enquiry</span>
+            <h2 class="section-title" data-i18n="enq_title">
+              Course Registration &amp; Multi-Sector Business Enquiry
+            </h2>
+            <p class="body-text" data-i18n="enq_desc">
+              Register online for NOREA Education courses or submit an enquiry for NOREA Events, NOREA Health, or NOREA
+              Insurance. Receive instant WhatsApp &amp; Email confirmation with your unique reference ID.
             </p>
             <div class="enquiry-info-box">
               <div class="info-item">
                 <span class="info-icon float-wa">&#128172;</span>
                 <div>
-                  <strong>WhatsApp Notification</strong>
-                  <p>Opens WhatsApp immediately with your formatted enquiry summary and reference number.</p>
+                  <strong>Instant WhatsApp Integration</strong>
+                  <p>Connects directly with NOREA (+91 96828 18618) with your formatted registration summary.</p>
                 </div>
               </div>
               <div class="info-item">
                 <span class="info-icon float-mail">&#9993;</span>
                 <div>
-                  <strong>Email Notification</strong>
-                  <p>Triggers email confirmation with your selected program, learning mode, and reference ID.</p>
+                  <strong>Automated Email Confirmation</strong>
+                  <p>Dispatches confirmation to norea0083@gmail.com and your registered email address.</p>
+                </div>
+              </div>
+              <div class="info-item payment-future-card">
+                <span class="info-icon grad-indigo" style="color:#fff;">&#128179;</span>
+                <div>
+                  <div class="future-title-row">
+                    <strong>Online Payment Facility</strong>
+                    <span class="future-phase-pill">Future Phase</span>
+                  </div>
+                  <p>
+                    Integrated digital fee &amp; booking payment gateway (UPI, Cards, NetBanking &amp; International
+                    Payments) is scheduled for our upcoming Phase 2 rollout.
+                  </p>
                 </div>
               </div>
             </div>
@@ -346,20 +778,24 @@
 
               <!-- Form View -->
               <form id="enquiryForm" novalidate>
-                <h3 class="form-title">Quick Student Enquiry</h3>
-                <p class="form-sub">
-                  Fill in your details below — instant WhatsApp &amp; Email notifications will be triggered on submit.
+                <div class="form-mode-tabs">
+                  <span class="form-mode-badge active">✦ Online Course Registration &amp; Sector Enquiry</span>
+                </div>
+                <h3 class="form-title" data-i18n="form_heading">Register or Enquire Now</h3>
+                <p class="form-sub" data-i18n="form_subheading">
+                  Select your business vertical and service/program below — instant WhatsApp &amp; Email notifications
+                  will be triggered on submit.
                 </p>
 
                 <div class="field-row">
                   <div class="field-group">
                     <label for="fullName">Full Name <span class="req">*</span></label>
-                    <input id="fullName" name="fullName" type="text" placeholder="Enter student name" required />
+                    <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required />
                     <small class="error-msg" data-error="fullName"></small>
                   </div>
                   <div class="field-group">
                     <label for="email">Email Address <span class="req">*</span></label>
-                    <input id="email" name="email" type="email" placeholder="student@example.com" required />
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required />
                     <small class="error-msg" data-error="email"></small>
                   </div>
                 </div>
@@ -367,44 +803,81 @@
                 <div class="field-row">
                   <div class="field-group">
                     <label for="phone">WhatsApp / Mobile Number <span class="req">*</span></label>
-                    <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required />
+                    <input id="phone" name="phone" type="tel" placeholder="+91 96828 18618" required />
                     <small class="error-msg" data-error="phone"></small>
                   </div>
                   <div class="field-group">
-                    <label for="program">Select Program <span class="req">*</span></label>
+                    <label for="vertical">Business Vertical <span class="req">*</span></label>
+                    <select id="vertical" name="vertical" required>
+                      <option value="NOREA Education">NOREA Education (Courses &amp; Training)</option>
+                      <option value="NOREA Events">NOREA Events (Corporate, Educational &amp; Social)</option>
+                      <option value="NOREA Health">NOREA Health (Awareness &amp; Wellness)</option>
+                      <option value="NOREA Insurance">NOREA Insurance (Guidance via Authorized Partners)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field-row">
+                  <div class="field-group">
+                    <label for="program">Select Course / Service <span class="req">*</span></label>
                     <select id="program" name="program" required>
-                      <option value="">Choose a program…</option>
-                      <option value="Spoken English & Communication">Spoken English &amp; Communication</option>
-                      <option value="Personality Development">Personality Development</option>
-                      <option value="Parenting & Child Development">Parenting &amp; Child Development</option>
+                      <option value="">Choose a course or service…</option>
+                      <optgroup label="1. NOREA Education">
+                        <option value="Spoken English & Communication">Spoken English &amp; Communication</option>
+                        <option value="Personality Development">Personality Development</option>
+                        <option value="Parenting & Child Development">Parenting Programs</option>
+                        <option value="Professional Training">Professional Training</option>
+                      </optgroup>
+                      <optgroup label="2. NOREA Events">
+                        <option value="Corporate Events">Corporate Events</option>
+                        <option value="Educational Events">Educational Events</option>
+                        <option value="Social Events">Social Events</option>
+                        <option value="Workshops & Seminars">Workshops &amp; Seminars</option>
+                      </optgroup>
+                      <optgroup label="3. NOREA Health">
+                        <option value="Health Awareness Programs">Health Awareness Programs</option>
+                        <option value="Wellness Initiatives">Wellness Initiatives</option>
+                        <option value="Health-related Services">Health-related Services</option>
+                      </optgroup>
+                      <optgroup label="4. NOREA Insurance">
+                        <option value="Insurance Guidance">Insurance Guidance</option>
+                        <option value="Insurance Services (Authorized Partners)">Insurance Services through Authorized Partners</option>
+                      </optgroup>
                     </select>
                     <small class="error-msg" data-error="program"></small>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="learningMode">Preferred Mode / Delivery <span class="req">*</span></label>
+                    <select id="learningMode" name="learningMode" required>
+                      <option value="">Select preferred mode…</option>
+                      <option value="Online (Live Virtual / Digital)">Online (Live Virtual / Digital)</option>
+                      <option value="In-person (At Center / On-Site)">In-person (At Center / On-Site)</option>
+                      <option value="Hybrid (Online + In-Person)">Hybrid (Online + In-Person)</option>
+                    </select>
+                    <small class="error-msg" data-error="learningMode"></small>
                   </div>
                 </div>
 
                 <div class="field-group">
-                  <label for="learningMode">Preferred Learning Mode <span class="req">*</span></label>
-                  <select id="learningMode" name="learningMode" required>
-                    <option value="">Select learning mode…</option>
-                    <option value="Online (live virtual sessions)">Online (live virtual sessions)</option>
-                    <option value="In-person (at the institute)">In-person (at the institute)</option>
-                    <option value="Hybrid (online + in-person)">Hybrid (online + in-person)</option>
-                  </select>
-                  <small class="error-msg" data-error="learningMode"></small>
-                </div>
-
-                <div class="field-group">
-                  <label for="message">Message (Optional)</label>
+                  <label for="message">Additional Details / Message (Optional)</label>
                   <textarea
                     id="message"
                     name="message"
                     rows="3"
-                    placeholder="Share your goals, preferred batch timings, or questions…"
+                    placeholder="Share your goals, preferred batch timings, event requirements, or questions…"
                   ></textarea>
                 </div>
 
+                <div class="payment-preview-strip">
+                  <span>&#128179; <strong>Online Payment Facility:</strong> Future Phase (Pay after confirmation)</span>
+                  <span class="phase-tag">Phase 2 Ready</span>
+                </div>
+
                 <div class="btn-row">
-                  <button type="submit" id="submitBtn" class="btn btn-primary btn-lg">Submit &amp; Notify &rarr;</button>
+                  <button type="submit" id="submitBtn" class="btn btn-primary btn-lg">
+                    Complete Registration &amp; Notify &rarr;
+                  </button>
                   <button type="button" id="clearBtn" class="btn btn-outline btn-lg">Clear</button>
                 </div>
 
@@ -426,7 +899,7 @@
                   </a>
                 </div>
                 <p id="emailStatusNote" class="status-note"></p>
-                <button type="button" id="resetSuccessBtn" class="btn btn-ghost">Submit Another Enquiry</button>
+                <button type="button" id="resetSuccessBtn" class="btn btn-ghost">Submit Another Registration / Enquiry</button>
               </div>
             </div>
           </div>
@@ -439,7 +912,7 @@
         <div class="modal-panel sent-popup-panel">
           <button type="button" id="sentPopupClose" class="modal-close" aria-label="Close">&times;</button>
           <div class="success-icon">&#10003;</div>
-          <h2 id="sentPopupTitle" style="font-size:2rem;">Email Sent!</h2>
+          <h2 id="sentPopupTitle" style="font-size:2rem;">Registration Submitted!</h2>
           <p id="sentPopupMsg" class="form-sub" style="margin-top:8px;"></p>
           <div id="sentPopupRef" class="ref-badge"></div>
           <div class="btn-row center" style="margin-top:16px;">
@@ -448,22 +921,24 @@
         </div>
       </div>
 
-      <!-- CONTACT & CTA BANNER -->
+      <!-- 5. CONTACT & CTA BANNER -->
       <section id="contact" class="section">
         <div class="container">
           <div class="cta-banner reveal">
             <div class="cta-glow-1"></div>
             <div class="cta-glow-2"></div>
             <div class="cta-content">
-              <span class="cta-pill">✦ Learn • Express • Grow</span>
-              <h2>Ready to discover a brighter, more confident you?</h2>
-              <p>
-                Submit a quick enquiry and get instant WhatsApp &amp; Email confirmation with our upcoming batch
-                details.
+              <span class="cta-pill">✦ NOREA • Learn • Express • Grow</span>
+              <h2 data-i18n="cta_title">Partner with NOREA Across Education, Events, Health &amp; Insurance</h2>
+              <p data-i18n="cta_sub">
+                Connect with our headquarters in Greater Noida or register online for instant WhatsApp &amp; Email
+                assistance across India and international markets.
               </p>
               <div class="btn-row center">
-                <a href="#enquiry" class="btn btn-amber btn-lg">Enquire Now &rarr;</a>
-                <a href="#programs" class="btn btn-outline-light btn-lg">Explore Programs</a>
+                <a href="#enquiry" class="btn btn-amber btn-lg">Register / Enquire Now &rarr;</a>
+                <a href="https://wa.me/919682818618" target="_blank" rel="noreferrer" class="btn btn-outline-light btn-lg">
+                  &#128172; WhatsApp +91 96828 18618
+                </a>
               </div>
             </div>
           </div>
@@ -479,35 +954,40 @@
           <a href="#home" class="logo">
             <span class="logo-mark" aria-hidden="true">✦</span>
             <span class="logo-text">
-              <span class="logo-name light">NŌRÉA</span>
-              <span class="logo-sub amber">LEARNING &amp; DEVELOPMENT</span>
+              <span class="logo-name light">NOREA</span>
+              <span class="logo-sub amber">INTERNATIONAL LEARNING &amp; DEVELOPMENT GROUP</span>
             </span>
           </a>
           <p class="footer-about">
-            A colourful, welcoming learning institute focused on Spoken English, Personality Development, Confidence
-            Building, and Positive Parenting.
+            An international-level multi-sector business brand spanning NOREA Education, NOREA Events, NOREA Health, and
+            NOREA Insurance — empowering individuals and organizations across India and global markets.
           </p>
           <p class="footer-tag">LEARN • EXPRESS • GROW</p>
           <div class="footer-lounge">
-            <img src="images/program-spoken-english.jpg" alt="Professionals discussing at NŌRÉA" loading="lazy" />
+            <img src="images/program-spoken-english.jpg" alt="Professionals discussing at NOREA" loading="lazy" />
           </div>
         </div>
 
         <div class="footer-col-links">
-          <h4 class="footer-heading">Quick Links</h4>
+          <h4 class="footer-heading">Main Sections &amp; Verticals</h4>
           <ul class="footer-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#programs">Our Programs</a></li>
-            <li><a href="#why-norea">Why NŌRÉA</a></li>
-            <li><a href="#enquiry">Admissions Enquiry</a></li>
+            <li><a href="#about">About NOREA</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="education.html">NOREA Education</a></li>
+            <li><a href="events.html">NOREA Events</a></li>
+            <li><a href="health.html">NOREA Health</a></li>
+            <li><a href="insurance.html">NOREA Insurance</a></li>
+            <li><a href="#founders">Our Founders</a></li>
+            <li><a href="#enquiry">Online Course Registration</a></li>
           </ul>
         </div>
 
         <div class="footer-col-contact">
           <h4 class="footer-heading">Contact Details</h4>
           <p class="footer-about" style="margin-top:0;margin-bottom:16px;">
-            Have a question? Reach out directly or <a href="#enquiry" class="footer-accent-link">submit a quick enquiry</a> for instant WhatsApp &amp; Email updates.
+            Have a question? Reach out directly or <a href="#enquiry" class="footer-accent-link">submit a quick enquiry</a>
+            for instant WhatsApp &amp; Email updates.
           </p>
 
           <ul class="footer-contact-list">
@@ -540,7 +1020,7 @@
             <li class="footer-contact-item">
               <span class="footer-contact-icon grad-indigo" aria-hidden="true">&#128205;</span>
               <div class="footer-contact-body">
-                <span class="footer-contact-label">Institute Address</span>
+                <span class="footer-contact-label">Corporate Office Address</span>
                 <span class="footer-contact-val address">
                   H.NO 273, First Floor Block C, Sector Omicorn-1 ,Mathurapur, Greater Noida
                 </span>
@@ -550,16 +1030,30 @@
         </div>
       </div>
 
+      <!-- LEGAL POLICIES ROW (Privacy Policy, Terms & Conditions, Refund & Cancellation Policy) -->
+      <div class="container footer-policies-bar">
+        <div class="policy-links">
+          <button type="button" class="policy-link-btn" data-policy="privacy">Privacy Policy</button>
+          <span class="policy-sep">&bull;</span>
+          <button type="button" class="policy-link-btn" data-policy="terms">Terms &amp; Conditions</button>
+          <span class="policy-sep">&bull;</span>
+          <button type="button" class="policy-link-btn" data-policy="refund">Refund &amp; Cancellation Policy</button>
+        </div>
+        <div class="future-pay-badge">
+          &#128274; Online Payment Facility (Phase 2 Ready) &bull; Bilingual (EN / हिंदी)
+        </div>
+      </div>
+
       <div class="container footer-bottom">
         <p>
-          &copy; <span id="year"></span> NŌRÉA – Learning &amp; Development. All rights reserved. &bull; Developed And
-          Maintained by <strong style="color: #fcd34d;">EGCS.</strong>
+          &copy; <span id="year"></span> NOREA – International Learning &amp; Development Group. All rights reserved.
+          &bull; Developed And Maintained by <strong style="color: #fcd34d;">EGCS.</strong>
         </p>
         <p class="footer-tag-sm">LEARN • EXPRESS • GROW</p>
       </div>
     </footer>
 
-    <!-- PROGRAM DETAILS MODAL -->
+    <!-- PROGRAM & POLICY DETAILS MODAL -->
     <div id="programModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-backdrop" id="modalBackdrop"></div>
       <div class="modal-panel">
@@ -568,6 +1062,6 @@
       </div>
     </div>
 
-    <script src="script.js?v=13"></script>
+    <script src="script.js?v=20"></script>
   </body>
 </html>
